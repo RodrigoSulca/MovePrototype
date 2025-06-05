@@ -630,6 +630,7 @@ GameObject:
   - component: {fileID: 256822356}
   - component: {fileID: 256822355}
   - component: {fileID: 256822354}
+  - component: {fileID: 256822353}
   - component: {fileID: 256822358}
   m_Layer: 0
   m_Name: Horse
@@ -638,6 +639,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &256822353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 256822352}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fb499897a019074d8fdc5fa2beed9c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 330585545}
+  zDistance: 10
+  minX: -5.5
+  maxX: -3
 --- !u!135 &256822354
 SphereCollider:
   m_ObjectHideFlags: 0
