@@ -19,8 +19,7 @@ public class NoteController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         rb.DOMoveZ(endPoint.transform.position.z, speed).SetEase(Ease.Linear).OnComplete(() =>
         {
-            multiplierController.consecNotes = 0;
-            multiplierController.actualMult = 1;
+            multiplierController.FailNote();
             Destroy(gameObject);
         });
     }

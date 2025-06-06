@@ -4,9 +4,11 @@ public class NotesGenerator : MonoBehaviour
 {
     public TextAsset chart; // Nombre del archivo JSON en Resources (sin extensión)
     public GameObject prefabNota; // Prefab para generar las notes
+    //public GameObject playerInput;
     public Transform[] lines; // Array de posiciones de las líneas
 
     public NotesList notesList;
+    public float moveTime;
     private int indiceNotaActual = 0;
     private float tiempoInicio;
 
@@ -26,8 +28,7 @@ public class NotesGenerator : MonoBehaviour
         float tiempoActual = Time.time - tiempoInicio;
 
         // Generar notes en el tiempo correspondiente
-        while (indiceNotaActual < notesList.notes.Length &&
-               notesList.notes[indiceNotaActual].spawnTime <= tiempoActual)
+        while (indiceNotaActual < notesList.notes.Length && notesList.notes[indiceNotaActual].spawnTime - moveTime <= tiempoActual)
         {
             GenerarNota(notesList.notes[indiceNotaActual]);
             indiceNotaActual++;
