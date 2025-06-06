@@ -6,6 +6,7 @@ TagManager:
   tags:
   - EndPoint
   - Note
+  - MultiplierM
   layers:
   - Default
   - TransparentFX

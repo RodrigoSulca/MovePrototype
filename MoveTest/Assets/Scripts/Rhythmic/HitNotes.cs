@@ -30,11 +30,9 @@ public class HitNotes : MonoBehaviour
 
     void OnTriggerStay(Collider other)
     {
-        
         if (active && other.CompareTag("Note"))
         {
-            Debug.Log("Destroy Note");
-            Destroy(other.gameObject);
+            other.GetComponent<NoteController>().PlayNote();
         }
     }
 }
