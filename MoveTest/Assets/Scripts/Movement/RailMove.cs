@@ -8,9 +8,11 @@ public class RailMove : MonoBehaviour
     public GameObject dmgPanel;
     private int railIndex;
     private bool isMoving;
+    private Rigidbody rb;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        rb = GetComponent<Rigidbody>();
         railIndex++;
     }
 
@@ -26,7 +28,7 @@ public class RailMove : MonoBehaviour
         {
             railIndex--;
             isMoving = true;
-            transform.DOMoveX(rails[railIndex].transform.position.x, moveTime).SetEase(Ease.Linear).OnComplete(() =>
+            rb.DOMoveX(rails[railIndex].transform.position.x, moveTime).SetEase(Ease.Linear).OnComplete(() =>
             {
                 isMoving = false;
             });
@@ -35,7 +37,7 @@ public class RailMove : MonoBehaviour
         {
             railIndex++;
             isMoving = true;
-            transform.DOMoveX(rails[railIndex].transform.position.x, moveTime).SetEase(Ease.Linear).OnComplete(() =>
+            rb.DOMoveX(rails[railIndex].transform.position.x, moveTime).SetEase(Ease.Linear).OnComplete(() =>
             {
                 isMoving = false;
             });
@@ -46,8 +48,8 @@ public class RailMove : MonoBehaviour
     {
         if (other.CompareTag("Enemy") && onHorse)
         {
-            dmgPanel.SetActive(true);
             moveTime = 0.5f;
+            dmgPanel.SetActive(true);
             onHorse = false;
             transform.DOKill();
             Destroy(other.gameObject);
