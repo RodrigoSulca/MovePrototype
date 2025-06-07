@@ -2,10 +2,9 @@ using UnityEngine;
 
 public class NotesGenerator : MonoBehaviour
 {
-    public TextAsset chart; // Nombre del archivo JSON en Resources (sin extensión)
-    public GameObject prefabNota; // Prefab para generar las notes
-    //public GameObject playerInput;
-    public Transform[] lines; // Array de posiciones de las líneas
+    public TextAsset chart;
+    public Transform[] lines;
+    public GameObject[] notePrefabs;
 
     public NotesList notesList;
     public float moveTime;
@@ -14,7 +13,6 @@ public class NotesGenerator : MonoBehaviour
 
     void Start()
     {
-        // Cargar las notes desde el archivo JSON en Resources
         CargarCancion();
         tiempoInicio = Time.time;
     }
@@ -24,10 +22,9 @@ public class NotesGenerator : MonoBehaviour
         if (notesList == null || indiceNotaActual >= notesList.notes.Length){
             return;
         }
-        // Calcular el tiempo transcurrido desde el inicio
+
         float tiempoActual = Time.time - tiempoInicio;
 
-        // Generar notes en el tiempo correspondiente
         while (indiceNotaActual < notesList.notes.Length && notesList.notes[indiceNotaActual].spawnTime <= tiempoActual)
         {
             GenerarNota(notesList.notes[indiceNotaActual]);
@@ -65,8 +62,7 @@ public class NotesGenerator : MonoBehaviour
             return;
         }
 
-        // Crear la nota en la posición de la línea correspondiente
         Transform posicionline = lines[nota.line - 1];
-        Instantiate(prefabNota, posicionline.position, Quaternion.identity);
+        Instantiate(notePrefabs[nota.line - 1], posicionline.position, Quaternion.identity);
     }
 }

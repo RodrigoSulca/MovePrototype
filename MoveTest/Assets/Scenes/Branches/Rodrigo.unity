@@ -178,7 +178,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 114b36a9edc377440a2b9f16686692d2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -375,7 +375,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 1702e071a58f2934c988bfccf74542b5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -526,7 +526,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 48a6ca1919ced9e42a9c6293c9a6d788, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1378,7 +1378,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: d945718ba3f283d458ed0e50e3fc0fd5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2050,7 +2050,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 458d7005d1aba1c489a0143efa2e5b8a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2563,12 +2563,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chart: {fileID: 4900000, guid: f5c8b4fca387db44b80ff80ee4b31336, type: 3}
-  prefabNota: {fileID: 3571433703518203985, guid: e3661670266e82d418f4a6a6cd7b5199, type: 3}
   lines:
   - {fileID: 119670679}
   - {fileID: 1933944094}
   - {fileID: 1515376919}
   - {fileID: 2026577512}
+  notePrefabs:
+  - {fileID: 2399142389743611863, guid: fb0606a451553a4479d5d414f22a32de, type: 3}
+  - {fileID: 8522105898475668009, guid: f6a2957a023e72340b67e1817db49afb, type: 3}
+  - {fileID: 5445722874474816019, guid: 63d362f42e3c50646ae0fc9068c98775, type: 3}
+  - {fileID: 6713943089359731223, guid: 8d61c1b7a597a4f4a90a752f7660b43a, type: 3}
   notesList:
     notes: []
   moveTime: 3
