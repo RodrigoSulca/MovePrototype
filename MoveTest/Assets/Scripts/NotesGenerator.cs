@@ -28,11 +28,17 @@ public class NotesGenerator : MonoBehaviour
         float tiempoActual = Time.time - tiempoInicio;
 
         // Generar notes en el tiempo correspondiente
-        while (indiceNotaActual < notesList.notes.Length && notesList.notes[indiceNotaActual].spawnTime - moveTime <= tiempoActual)
+        while (indiceNotaActual < notesList.notes.Length && notesList.notes[indiceNotaActual].spawnTime <= tiempoActual)
         {
             GenerarNota(notesList.notes[indiceNotaActual]);
             indiceNotaActual++;
         }
+
+         if (indiceNotaActual >= notesList.notes.Length){
+        indiceNotaActual = 0;
+        tiempoInicio = Time.time;
+        Debug.Log("Reiniciando chart...");
+    }
     }
 
     void CargarCancion()

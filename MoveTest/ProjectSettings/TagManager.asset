@@ -7,6 +7,7 @@ TagManager:
   - EndPoint
   - Note
   - MultiplierM
+  - Enemy
   layers:
   - Default
   - TransparentFX
