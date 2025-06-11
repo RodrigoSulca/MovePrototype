@@ -2,15 +2,15 @@ using UnityEngine;
 
 public class NotesGenerator : MonoBehaviour
 {
-    public enum Instrument { I1, I2, I3, I4 }
+    public enum Instrument { I1, I2}
     public Instrument instrument;
     public TextAsset[] charts;
     public Transform[] lines;
     public GameObject[] notePrefabs;
 
     public NotesList notesList;
-    public float moveTime;
     public int indiceNotaActual = 0;
+    public float tiempoActual;
     private float tiempoInicio;
 
     void Start()
@@ -31,7 +31,7 @@ public class NotesGenerator : MonoBehaviour
             return;
         }
 
-        float tiempoActual = Time.time - tiempoInicio;
+        tiempoActual = Time.time- tiempoInicio;
 
         while (indiceNotaActual < notesList.notes.Length && notesList.notes[indiceNotaActual].spawnTime <= tiempoActual)
         {
