@@ -1231,7 +1231,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &726005280
 Transform:
   m_ObjectHideFlags: 0
@@ -1486,8 +1486,6 @@ MonoBehaviour:
   charts:
   - {fileID: 4900000, guid: c1c85d45da9656f4795c62aebd79e71d, type: 3}
   - {fileID: 4900000, guid: f5c8b4fca387db44b80ff80ee4b31336, type: 3}
-  - {fileID: 4900000, guid: c1c85d45da9656f4795c62aebd79e71d, type: 3}
-  - {fileID: 4900000, guid: f5c8b4fca387db44b80ff80ee4b31336, type: 3}
   lines:
   - {fileID: 119670679}
   - {fileID: 1933944094}
@@ -1500,8 +1498,8 @@ MonoBehaviour:
   - {fileID: 6713943089359731223, guid: 8d61c1b7a597a4f4a90a752f7660b43a, type: 3}
   notesList:
     notes: []
-  moveTime: 3
   indiceNotaActual: 0
+  tiempoActual: 0
 --- !u!1 &813870535
 GameObject:
   m_ObjectHideFlags: 0
