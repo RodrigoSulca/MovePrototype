@@ -27,7 +27,7 @@ public class EnemiesGenerator : MonoBehaviour
 
         while (enemyIndex < enemiesList.enemies.Length && enemiesList.enemies[enemyIndex].spawnTime <= tiempoActual)
         {
-            GenerarNota(enemiesList.enemies[enemyIndex]);
+            GenerarEnemigo(enemiesList.enemies[enemyIndex]);
             enemyIndex++;
         }
 
@@ -54,7 +54,7 @@ public class EnemiesGenerator : MonoBehaviour
         }
     }
 
-    void GenerarNota(Enemy enemy)
+    void GenerarEnemigo(Enemy enemy)
     {
         if (enemy.spawnRow < 1 || enemy.spawnRow > rows.Length)
         {

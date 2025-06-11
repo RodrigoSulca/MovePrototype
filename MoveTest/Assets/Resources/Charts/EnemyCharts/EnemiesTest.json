@@ -1,10 +1,12 @@
 {
   "enemies": [
     {
+      "enemyId": 0,
       "spawnRow": 1,
       "spawnTime": 1
     },
     {
+      "enemyId": 1,
       "spawnRow": 3,
       "spawnTime": 1
     }

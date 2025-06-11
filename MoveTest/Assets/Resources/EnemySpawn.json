@@ -1,0 +1,54 @@
+{
+    "enemies": [
+        {
+        "enemyId": 0,
+        "spawnTime": 2,
+        "line": 1
+        },
+        {
+        "enemyId": 2,
+        "spawnTime": 5,
+        "line": 1
+        },
+        {
+        "enemyId": 0,
+        "spawnTime": 8,
+        "line": 2
+        },
+        {
+        "enemyId": 1,
+        "spawnTime": 11,
+        "line": 3
+        },
+        {
+        "enemyId": 1,
+        "spawnTime": 14,
+        "line": 1
+        },
+        {
+        "enemyId": 2,
+        "spawnTime": 17,
+        "line": 1
+        },
+        {
+        "enemyId": 0,
+        "spawnTime": 20,
+        "line": 3
+        },
+        {
+        "enemyId": 0,
+        "spawnTime": 23,
+        "line": 2
+        },
+        {
+        "enemyId": 1,
+        "spawnTime": 26,
+        "line": 1
+        },
+        {
+        "enemyId": 2,
+        "spawnTime": 29,
+        "line": 3
+        }
+    ]
+}
