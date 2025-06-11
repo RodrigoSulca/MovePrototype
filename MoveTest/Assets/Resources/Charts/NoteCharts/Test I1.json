@@ -1,32 +1,36 @@
 {
   "notes": [
-    {
-      "spawnTime": 0.534,
-      "line": 1
-    },
-    {
-      "spawnTime": 0.534,
-      "line": 3
-    },
-    {
-      "spawnTime": 0.534,
-      "line": 4
-    },
-    {
-      "spawnTime": 1.022,
-      "line": 1
-    },
-    {
-      "spawnTime": 1.022,
-      "line": 2
-    },
-    {
-      "spawnTime": 1.022,
-      "line": 3
-    },
-    {
-      "spawnTime": 1.509,
-      "line": 4
-    }
+    { "spawnTime": 0.5, "line": 1 },
+    { "spawnTime": 0.8, "line": 2 },
+    { "spawnTime": 1.1, "line": 3 },
+    { "spawnTime": 1.4, "line": 2 },
+    { "spawnTime": 1.7, "line": 1 },
+    { "spawnTime": 2.0, "line": 2 },
+    { "spawnTime": 2.3, "line": 3 },
+    { "spawnTime": 2.6, "line": 2 },
+    { "spawnTime": 2.9, "line": 1 },
+    { "spawnTime": 3.2, "line": 2 },
+    { "spawnTime": 3.5, "line": 3 },
+    { "spawnTime": 3.8, "line": 4 },
+    { "spawnTime": 4.1, "line": 1 },
+    { "spawnTime": 4.4, "line": 2 },
+    { "spawnTime": 4.7, "line": 3 },
+    { "spawnTime": 5.0, "line": 4 },
+    { "spawnTime": 5.3, "line": 2 },
+    { "spawnTime": 5.6, "line": 3 },
+    { "spawnTime": 5.9, "line": 4 },
+    { "spawnTime": 6.2, "line": 3 },
+    { "spawnTime": 6.5, "line": 2 },
+    { "spawnTime": 6.8, "line": 3 },
+    { "spawnTime": 7.1, "line": 4 },
+    { "spawnTime": 7.4, "line": 3 },
+    { "spawnTime": 7.7, "line": 2 },
+    { "spawnTime": 8.0, "line": 3 },
+    { "spawnTime": 8.3, "line": 4 },
+    { "spawnTime": 8.6, "line": 1 },
+    { "spawnTime": 8.9, "line": 2 },
+    { "spawnTime": 9.2, "line": 3 },
+    { "spawnTime": 9.5, "line": 4 },
+    { "spawnTime": 9.8, "line": 1 }
   ]
 }
