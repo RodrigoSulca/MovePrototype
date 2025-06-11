@@ -13,7 +13,7 @@ public class EnemiesGenerator : MonoBehaviour
 
     void Start()
     {
-        CargarCancion();
+        CargarEnemigos();
         tiempoInicio = Time.time;
     }
 
@@ -38,7 +38,7 @@ public class EnemiesGenerator : MonoBehaviour
     }
     }
 
-    void CargarCancion()
+    void CargarEnemigos()
     {
         if (chart != null)
         {
@@ -61,8 +61,14 @@ public class EnemiesGenerator : MonoBehaviour
             Debug.LogWarning("Línea inválida: " + enemy.spawnRow);
             return;
         }
+        if (enemy.typeId < 1 || enemy.typeId > 4)   // 3 Tipos de enemigos - Red(1), Blue(2) y Green(3)
+        {
+            Debug.LogWarning("ID de enemigo inválido: " + enemy.typeId);
+            return;
+        }
+        enemyTypeId = enemy.typeId;
 
         Transform posicionline = rows[enemy.spawnRow - 1];
-        Instantiate(enemyPrefabs[enemyTypeId], posicionline.position, Quaternion.identity);
+        Instantiate(enemyPrefabs[enemyTypeId - 1], posicionline.position, Quaternion.identity);
     }
 }
