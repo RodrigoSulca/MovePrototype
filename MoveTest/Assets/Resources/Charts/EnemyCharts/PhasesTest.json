@@ -1,0 +1,28 @@
+{
+  "phases": [
+    {
+      "phaseId": 1,
+      "enemyId": 2,
+      "start": 1,
+      "finish": 12,
+      "spawnRow":  [  1,   3,  2,  3],
+      "spawnTime": [0.6, 0.6,  2,  3]
+    },
+    {
+      "phaseId": 2,
+      "enemyId": 1,
+      "start": 14,
+      "finish": 26,
+      "spawnRow":  [  1,   3,  2,  3],
+      "spawnTime": [0.6, 0.6,  2,  3]
+    },
+    {
+      "phaseId": 3,
+      "enemyId": 3,
+      "start": 28,
+      "finish": 40,
+      "spawnRow":  [  1,   3,  2,  3],
+      "spawnTime": [0.6, 0.6,  2,  3]
+    }
+  ]
+}
