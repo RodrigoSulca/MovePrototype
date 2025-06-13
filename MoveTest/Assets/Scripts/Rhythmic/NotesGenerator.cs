@@ -11,12 +11,12 @@ public class NotesGenerator : MonoBehaviour
     public NotesList notesList;
     public int indiceNotaActual = 0;
     public float tiempoActual;
-    private float tiempoInicio;
+    public AudioSource audioSource;
 
     void Start()
     {
         CargarCancion();
-        tiempoInicio = Time.time;
+        audioSource.Play();
     }
 
     void Update()
@@ -31,7 +31,7 @@ public class NotesGenerator : MonoBehaviour
             return;
         }
 
-        tiempoActual = Time.time- tiempoInicio;
+        tiempoActual = audioSource.time;
 
         while (indiceNotaActual < notesList.notes.Length && notesList.notes[indiceNotaActual].spawnTime <= tiempoActual)
         {
@@ -41,9 +41,8 @@ public class NotesGenerator : MonoBehaviour
 
         if (indiceNotaActual >= notesList.notes.Length)
         {
-            indiceNotaActual = 0;
-            tiempoInicio = Time.time;
-            Debug.Log("Reiniciando chart...");
+            /*indiceNotaActual = 0;
+            Debug.Log("Reiniciando chart...");*/
         }
     }
 

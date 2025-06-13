@@ -1,13 +1,21 @@
 {
   "notes": [
-    { "spawnTime": 1, "line": 1 },
-    { "spawnTime": 1.5, "line": 1 },
-    { "spawnTime": 1, "line": 1 },
-    { "spawnTime": 1.5, "line": 1 },
-    { "spawnTime": 1, "line": 1 },
-    { "spawnTime": 1.5, "line": 1 },
-    { "spawnTime": 1, "line": 1 },
-    { "spawnTime": 1.5, "line": 1 }
-    
+    { "spawnTime": 12.9, "line": 1 },
+    { "spawnTime": 13.2, "line": 1 },
+    { "spawnTime": 13.5, "line": 1 },
+    { "spawnTime": 14.0, "line": 1 },
+    { "spawnTime": 14.5, "line": 1 },
+    { "spawnTime": 15.0, "line": 1 },
+    { "spawnTime": 15.5, "line": 1 },
+    { "spawnTime": 16.0, "line": 1 },
+    { "spawnTime": 16.5, "line": 1 },
+    { "spawnTime": 17.0, "line": 1 },
+    { "spawnTime": 17.5, "line": 1 },
+    { "spawnTime": 18.0, "line": 1 },
+    { "spawnTime": 18.5, "line": 1 },
+    { "spawnTime": 19.0, "line": 1 },
+    { "spawnTime": 19.5, "line": 1 },
+    { "spawnTime": 20.0, "line": 1 },
+    { "spawnTime": 20.5, "line": 1 }
   ]
 }
