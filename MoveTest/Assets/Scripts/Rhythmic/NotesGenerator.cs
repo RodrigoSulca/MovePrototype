@@ -1,4 +1,7 @@
 using UnityEngine;
+using System.Collections;
+using UnityEngine.UI;
+using DG.Tweening;
 
 public class NotesGenerator : MonoBehaviour
 {
@@ -11,12 +14,15 @@ public class NotesGenerator : MonoBehaviour
     public NotesList notesList;
     public int indiceNotaActual = 0;
     public float tiempoActual;
+    public Image beatImg;
+    public float beatInterval;
     public AudioSource audioSource;
 
     void Start()
     {
         CargarCancion();
         audioSource.Play();
+        StartCoroutine(Beat());
     }
 
     void Update()
@@ -72,6 +78,13 @@ public class NotesGenerator : MonoBehaviour
         instrument = (Instrument)(((int)instrument + 1) % System.Enum.GetValues(typeof(Instrument)).Length);
         CargarCancion();
         Debug.Log("Instrumento actual: " + instrument);
+    }
+
+    private IEnumerator Beat(){
+        beatImg.DOFade(0,0.3f);
+        yield return new WaitForSeconds(beatInterval);
+        beatImg.color = Color.white;
+        Beat();
     }
 
 }

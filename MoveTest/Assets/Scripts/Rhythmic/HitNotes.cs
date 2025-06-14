@@ -4,6 +4,7 @@ public class HitNotes : MonoBehaviour
 {
     public KeyCode inputKey;
     public Material activeMaterial;
+    public ComboRewards comboRewards;
     private bool active;
     private Renderer mRenderer;
     private Material defaultMaterial;
@@ -32,6 +33,7 @@ public class HitNotes : MonoBehaviour
     {
         if (active && other.CompareTag("Note"))
         {
+            comboRewards.actualCombo++;
             other.GetComponent<NoteController>().PlayNote();
         }
     }

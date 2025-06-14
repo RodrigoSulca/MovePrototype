@@ -5,15 +5,18 @@ public class MultiplierController : MonoBehaviour
 {
     public int actualMult;
     public int cantNotes;
-    public int consecNotes;
     public int totalPoints;
+    private int initCantNotes;
     public TMP_Text multiplierTxt;
     public TMP_Text pointsTxt;
     private AudioSource audioSource;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private ComboRewards comboRewards;
+
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
+        comboRewards = GetComponent<ComboRewards>();
+        initCantNotes = cantNotes;
     }
 
     // Update is called once per frame
@@ -26,17 +29,18 @@ public class MultiplierController : MonoBehaviour
 
     void CheckMult()
     {
-        if (consecNotes >= cantNotes && actualMult < 4)
+        if (comboRewards.actualCombo >= cantNotes && actualMult < 4)
         {
-            consecNotes = 0;
+            cantNotes += initCantNotes;
             actualMult++;
         }
     }
 
     public void FailNote()
     {
-        consecNotes = 0;
+        comboRewards.actualCombo = 0;
         actualMult = 1;
+        cantNotes = initCantNotes;
         audioSource.Play();
     }
 }

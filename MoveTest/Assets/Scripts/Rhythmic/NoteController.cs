@@ -29,7 +29,6 @@ public class NoteController : MonoBehaviour
 
     public void PlayNote()
     {
-        multiplierController.consecNotes++;
         int finalPoints = points * multiplierController.actualMult;
         multiplierController.totalPoints += finalPoints;
         rb.DOKill();
