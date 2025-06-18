@@ -84,7 +84,7 @@ public class NotesGenerator : MonoBehaviour
         beatImg.DOFade(0,0.3f);
         yield return new WaitForSeconds(beatInterval);
         beatImg.color = Color.white;
-        Beat();
+        StartCoroutine(Beat());
     }
 
 }
