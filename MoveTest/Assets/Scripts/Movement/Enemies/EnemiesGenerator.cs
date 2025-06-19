@@ -24,7 +24,8 @@ public class EnemiesGenerator : MonoBehaviour
 
     void Update()
     {
-        if (enemiesList[phaseIndex] == null || enemyIndex >= enemiesList[phaseIndex].enemies.Length){
+        if (enemiesList[phaseIndex] == null || enemyIndex >= enemiesList[phaseIndex].enemies.Length)
+        {
             return;
         }
 
@@ -32,8 +33,23 @@ public class EnemiesGenerator : MonoBehaviour
 
         while (enemyIndex < enemiesList[phaseIndex].enemies.Length && enemiesList[phaseIndex].enemies[enemyIndex].spawnTime <= tiempoActual)
         {
-            GenerarEnemigo(enemiesList[phaseIndex].enemies[enemyIndex]);
-            enemyIndex++;
+            // Creamos enemigos siempre que spawnTime este dentro del tiempo de la fase
+            if (enemiesList[phaseIndex].enemies[enemyIndex].spawnTime <= phasesList.phases[phaseIndex].finish)
+            {
+                GenerarEnemigo(enemiesList[phaseIndex].enemies[enemyIndex]);
+                enemyIndex++;
+            }
+            else
+            {
+                // Verificamos que termino la fase anterior correctamente
+                // Primero revisamos si no hay mas enemigos a spawnear
+                if (enemiesList[phaseIndex].enemies[enemyIndex] != null && phaseIndex < phasesList.phases.Length)
+                {
+                    phaseIndex++; // Nueva fase
+                    enemyIndex = 0; // Indice vuelve a 0
+                }
+                break;
+            }
         }
 
         // if (enemyIndex >= enemiesList.enemies.Length){ // Test para reiniciar
