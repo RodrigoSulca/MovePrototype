@@ -1,17 +1,17 @@
 {
   "enemies": [
     {
-      "typeId": 2,
+      "enemyId": 2,
       "spawnRow": 2,
       "spawnTime": 1.6
     },
     {
-      "typeId": 1,
+      "enemyId": 1,
       "spawnRow": 1,
       "spawnTime": 2.5
     },
     {
-      "typeId": 3,
+      "enemyId": 3,
       "spawnRow": 3,
       "spawnTime": 3.4
     }

@@ -4,9 +4,9 @@ using UnityEngine;
 public class Phase
 {
     public int phaseId;
-    public int enemyId;
     public float start;
     public float finish;
+    public int[] enemyId;
     public int[] spawnRow;
     public float[] spawnTime;
 }

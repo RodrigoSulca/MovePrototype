@@ -1287,7 +1287,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 726005280}
-  - component: {fileID: 726005281}
+  - component: {fileID: 726005282}
   m_Layer: 0
   m_Name: EnemiesManager
   m_TagString: Untagged
@@ -1310,7 +1310,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1805279425}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &726005281
+--- !u!114 &726005282
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1319,10 +1319,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 726005279}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05590a725b6a1214e9d5d80899f9517c, type: 3}
+  m_Script: {fileID: 11500000, guid: 71309e18e3303ff418645cecbe36d48f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chart: {fileID: 4900000, guid: e82a2fad93a280f4e89844d654d27425, type: 3}
+  chart: {fileID: 4900000, guid: becffa72e39d97946b97df4acad54a58, type: 3}
   rows:
   - {fileID: 634607955}
   - {fileID: 1156839685}
@@ -1331,9 +1331,9 @@ MonoBehaviour:
   - {fileID: 8356534356833644314, guid: 10c914303f660c64fb751fc127c4d7c0, type: 3}
   - {fileID: 8356534356833644314, guid: c80a78cba504d82499f9b7299acb06be, type: 3}
   - {fileID: 8356534356833644314, guid: 3861851f1e751654fbd6936372b0483c, type: 3}
-  enemiesList:
-    enemies: []
-  enemyTypeId: 0
+  enemiesList: []
+  phasesList:
+    phases: []
 --- !u!1 &760017845
 GameObject:
   m_ObjectHideFlags: 0

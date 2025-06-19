@@ -1,0 +1,16 @@
+{
+  "enemy": [
+    {
+      "enemyId": 1,
+      "speed": 3
+    },
+    {
+      "enemyId": 2,
+      "speed": 5
+    },
+    {
+      "enemyId": 3,
+      "speed": 1
+    }
+  ]
+}
