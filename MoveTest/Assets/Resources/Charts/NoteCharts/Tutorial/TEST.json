@@ -1,0 +1,600 @@
+{
+    "notes": [
+        {
+        "spawnTime": 3.333,
+        "line": 1
+    },
+    {
+        "spawnTime": 4.016,
+        "line": 1
+    },
+    {
+        "spawnTime": 4.272,
+        "line": 1
+    },
+    {
+        "spawnTime": 4.677,
+        "line": 1
+    },
+    {
+        "spawnTime": 5.232,
+        "line": 1
+    },
+    {
+        "spawnTime": 5.403,
+        "line": 1
+    },
+    {
+        "spawnTime": 5.851,
+        "line": 1
+    },
+    {
+        "spawnTime": 6.384,
+        "line": 1
+    },
+    {
+        "spawnTime": 6.576,
+        "line": 1
+    },
+    {
+        "spawnTime": 7.067,
+        "line": 1
+    },
+    {
+        "spawnTime": 7.259,
+        "line": 1
+    },
+    {
+        "spawnTime": 7.643,
+        "line": 1
+    },
+    {
+        "spawnTime": 8.197,
+        "line": 1
+    },
+    {
+        "spawnTime": 8.389,
+        "line": 1
+    },
+    {
+        "spawnTime": 8.816,
+        "line": 1
+    },
+    {
+        "spawnTime": 9.52,
+        "line": 1
+    },
+    {
+        "spawnTime": 10.096,
+        "line": 1
+    },
+    {
+        "spawnTime": 10.309,
+        "line": 1
+    },
+    {
+        "spawnTime": 10.672,
+        "line": 1
+    },
+    {
+        "spawnTime": 11.184,
+        "line": 1
+    },
+    {
+        "spawnTime": 11.44,
+        "line": 1
+    },
+    {
+        "spawnTime": 11.824,
+        "line": 1
+    },
+    {
+        "spawnTime": 12.379,
+        "line": 1
+    },
+    {
+        "spawnTime": 12.571,
+        "line": 1
+    },
+    {
+        "spawnTime": 13.061,
+        "line": 1
+    },
+    {
+        "spawnTime": 13.296,
+        "line": 1
+    },
+    {
+        "spawnTime": 13.659,
+        "line": 1
+    },
+    {
+        "spawnTime": 14.192,
+        "line": 1
+    },
+    {
+        "spawnTime": 14.384,
+        "line": 1
+    },
+    {
+        "spawnTime": 14.789,
+        "line": 1
+    },
+    {
+        "spawnTime": 15.557,
+        "line": 1
+    },
+    {
+        "spawnTime": 16.091,
+        "line": 1
+    },
+    {
+        "spawnTime": 16.283,
+        "line": 1
+    },
+    {
+        "spawnTime": 16.667,
+        "line": 1
+    },
+    {
+        "spawnTime": 17.157,
+        "line": 1
+    },
+    {
+        "spawnTime": 17.392,
+        "line": 1
+    },
+    {
+        "spawnTime": 17.797,
+        "line": 1
+    },
+    {
+        "spawnTime": 18.373,
+        "line": 1
+    },
+    {
+        "spawnTime": 18.565,
+        "line": 1
+    },
+    {
+        "spawnTime": 19.077,
+        "line": 1
+    },
+    {
+        "spawnTime": 19.269,
+        "line": 1
+    },
+    {
+        "spawnTime": 19.696,
+        "line": 1
+    },
+    {
+        "spawnTime": 20.187,
+        "line": 1
+    },
+    {
+        "spawnTime": 20.4,
+        "line": 1
+    },
+    {
+        "spawnTime": 20.805,
+        "line": 1
+    },
+    {
+        "spawnTime": 21.573,
+        "line": 1
+    },
+    {
+        "spawnTime": 22.085,
+        "line": 1
+    },
+    {
+        "spawnTime": 22.32,
+        "line": 1
+    },
+    {
+        "spawnTime": 22.64,
+        "line": 1
+    },
+    {
+        "spawnTime": 23.216,
+        "line": 1
+    },
+    {
+        "spawnTime": 23.429,
+        "line": 1
+    },
+    {
+        "spawnTime": 23.835,
+        "line": 1
+    },
+    {
+        "spawnTime": 24.368,
+        "line": 1
+    },
+    {
+        "spawnTime": 24.581,
+        "line": 1
+    },
+    {
+        "spawnTime": 25.072,
+        "line": 1
+    },
+    {
+        "spawnTime": 25.307,
+        "line": 1
+    },
+    {
+        "spawnTime": 25.669,
+        "line": 1
+    },
+    {
+        "spawnTime": 26.224,
+        "line": 1
+    },
+    {
+        "spawnTime": 26.437,
+        "line": 1
+    },
+    {
+        "spawnTime": 26.821,
+        "line": 1
+    },
+    {
+        "spawnTime": 27.568,
+        "line": 1
+    },
+    {
+        "spawnTime": 28.101,
+        "line": 1
+    },
+    {
+        "spawnTime": 28.315,
+        "line": 1
+    },
+    {
+        "spawnTime": 28.656,
+        "line": 1
+    },
+    {
+        "spawnTime": 29.147,
+        "line": 1
+    },
+    {
+        "spawnTime": 29.381,
+        "line": 1
+    },
+    {
+        "spawnTime": 29.808,
+        "line": 1
+    },
+    {
+        "spawnTime": 30.384,
+        "line": 1
+    },
+    {
+        "spawnTime": 30.555,
+        "line": 1
+    },
+    {
+        "spawnTime": 31.045,
+        "line": 1
+    },
+    {
+        "spawnTime": 31.301,
+        "line": 1
+    },
+    {
+        "spawnTime": 31.664,
+        "line": 1
+    },
+    {
+        "spawnTime": 32.176,
+        "line": 1
+    },
+    {
+        "spawnTime": 32.368,
+        "line": 1
+    },
+    {
+        "spawnTime": 32.816,
+        "line": 1
+    },
+    {
+        "spawnTime": 33.541,
+        "line": 1
+    },
+    {
+        "spawnTime": 34.053,
+        "line": 1
+    },
+    {
+        "spawnTime": 34.288,
+        "line": 1
+    },
+    {
+        "spawnTime": 34.672,
+        "line": 1
+    },
+    {
+        "spawnTime": 35.184,
+        "line": 1
+    },
+    {
+        "spawnTime": 35.419,
+        "line": 1
+    },
+    {
+        "spawnTime": 35.803,
+        "line": 1
+    },
+    {
+        "spawnTime": 36.357,
+        "line": 1
+    },
+    {
+        "spawnTime": 36.549,
+        "line": 1
+    },
+    {
+        "spawnTime": 37.061,
+        "line": 1
+    },
+    {
+        "spawnTime": 37.296,
+        "line": 1
+    },
+    {
+        "spawnTime": 37.68,
+        "line": 1
+    },
+    {
+        "spawnTime": 38.213,
+        "line": 1
+    },
+    {
+        "spawnTime": 38.363,
+        "line": 1
+    },
+    {
+        "spawnTime": 38.789,
+        "line": 1
+    },
+    {
+        "spawnTime": 39.557,
+        "line": 1
+    },
+    {
+        "spawnTime": 40.091,
+        "line": 1
+    },
+    {
+        "spawnTime": 40.304,
+        "line": 1
+    },
+    {
+        "spawnTime": 40.645,
+        "line": 1
+    },
+    {
+        "spawnTime": 41.2,
+        "line": 1
+    },
+    {
+        "spawnTime": 41.413,
+        "line": 1
+    },
+    {
+        "spawnTime": 41.819,
+        "line": 1
+    },
+    {
+        "spawnTime": 42.373,
+        "line": 1
+    },
+    {
+        "spawnTime": 42.565,
+        "line": 1
+    },
+    {
+        "spawnTime": 43.099,
+        "line": 1
+    },
+    {
+        "spawnTime": 43.312,
+        "line": 1
+    },
+    {
+        "spawnTime": 43.653,
+        "line": 1
+    },
+    {
+        "spawnTime": 44.208,
+        "line": 1
+    },
+    {
+        "spawnTime": 44.421,
+        "line": 1
+    },
+    {
+        "spawnTime": 44.827,
+        "line": 1
+    },
+    {
+        "spawnTime": 45.552,
+        "line": 1
+    },
+    {
+        "spawnTime": 46.107,
+        "line": 1
+    },
+    {
+        "spawnTime": 46.32,
+        "line": 1
+    },
+    {
+        "spawnTime": 46.661,
+        "line": 1
+    },
+    {
+        "spawnTime": 47.173,
+        "line": 1
+    },
+    {
+        "spawnTime": 47.408,
+        "line": 1
+    },
+    {
+        "spawnTime": 47.792,
+        "line": 1
+    },
+    {
+        "spawnTime": 48.368,
+        "line": 1
+    },
+    {
+        "spawnTime": 48.581,
+        "line": 1
+    },
+    {
+        "spawnTime": 49.093,
+        "line": 1
+    },
+    {
+        "spawnTime": 49.285,
+        "line": 1
+    },
+    {
+        "spawnTime": 49.648,
+        "line": 1
+    },
+    {
+        "spawnTime": 50.224,
+        "line": 1
+    },
+    {
+        "spawnTime": 50.416,
+        "line": 1
+    },
+    {
+        "spawnTime": 50.821,
+        "line": 1
+    },
+    {
+        "spawnTime": 51.547,
+        "line": 1
+    },
+    {
+        "spawnTime": 52.123,
+        "line": 1
+    },
+    {
+        "spawnTime": 52.315,
+        "line": 1
+    },
+    {
+        "spawnTime": 52.677,
+        "line": 1
+    },
+    {
+        "spawnTime": 53.211,
+        "line": 1
+    },
+    {
+        "spawnTime": 53.424,
+        "line": 1
+    },
+    {
+        "spawnTime": 53.787,
+        "line": 1
+    },
+    {
+        "spawnTime": 54.341,
+        "line": 1
+    },
+    {
+        "spawnTime": 54.555,
+        "line": 1
+    },
+    {
+        "spawnTime": 55.067,
+        "line": 1
+    },
+    {
+        "spawnTime": 55.28,
+        "line": 1
+    },
+    {
+        "spawnTime": 55.685,
+        "line": 1
+    },
+    {
+        "spawnTime": 56.155,
+        "line": 1
+    },
+    {
+        "spawnTime": 56.368,
+        "line": 1
+    },
+    {
+        "spawnTime": 56.773,
+        "line": 1
+    },
+    {
+        "spawnTime": 57.563,
+        "line": 1
+    },
+    {
+        "spawnTime": 58.032,
+        "line": 1
+    },
+    {
+        "spawnTime": 58.267,
+        "line": 1
+    },
+    {
+        "spawnTime": 58.651,
+        "line": 1
+    },
+    {
+        "spawnTime": 59.184,
+        "line": 1
+    },
+    {
+        "spawnTime": 59.376,
+        "line": 1
+    },
+    {
+        "spawnTime": 59.781,
+        "line": 1
+    },
+    {
+        "spawnTime": 60.357,
+        "line": 1
+    },
+    {
+        "spawnTime": 60.571,
+        "line": 1
+    },
+    {
+        "spawnTime": 61.061,
+        "line": 1
+    },
+    {
+        "spawnTime": 61.296,
+        "line": 1
+    },
+    {
+        "spawnTime": 61.659,
+        "line": 1
+    },
+    {
+        "spawnTime": 62.171,
+        "line": 1
+    },
+    {
+        "spawnTime": 62.405,
+        "line": 1
+    }
+    ]
+}

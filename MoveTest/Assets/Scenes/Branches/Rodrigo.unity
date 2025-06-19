@@ -4329,7 +4329,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &269163281
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5336,7 +5336,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   instrument: 0
   charts:
-  - {fileID: 4900000, guid: 9d54aa478b65bba46b4b1db93e3a3207, type: 3}
+  - {fileID: 4900000, guid: c81b430a1d9c2e442a9f8a0fac682bf9, type: 3}
   - {fileID: 4900000, guid: f5c8b4fca387db44b80ff80ee4b31336, type: 3}
   lines:
   - {fileID: 119670679}
@@ -6178,7 +6178,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1220605590
 RectTransform:
   m_ObjectHideFlags: 0
