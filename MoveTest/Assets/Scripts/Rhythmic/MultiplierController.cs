@@ -13,6 +13,8 @@ public class MultiplierController : MonoBehaviour
     public TMP_Text pointsTxt;
     private AudioSource audioSource;
     private ComboRewards comboRewards;
+    public NoteFeedback feedback;
+    public BeatFlash beatFlash;
 
     void Start()
     {
@@ -48,5 +50,11 @@ public class MultiplierController : MonoBehaviour
         actualMult = 1;
         cantNotes = initCantNotes;
         AudioManager.instance.PlayOneShot(FMODEvents.instance.noteFailed, this.transform.position);
+
+        if (feedback != null)
+                feedback.ShowFeedback(false);
+
+        if (beatFlash != null)
+                beatFlash.Flash(Color.red);
     }
 }

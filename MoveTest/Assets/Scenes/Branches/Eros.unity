@@ -4313,7 +4313,6 @@ MonoBehaviour:
   moveTime: 0.2
   onHorse: 1
   dmgPanel: {fileID: 946726462}
-  audioSource: {fileID: 0}
 --- !u!54 &256822359
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4427,7 +4426,6 @@ MonoBehaviour:
   moveTime: 0.2
   onHorse: 1
   dmgPanel: {fileID: 946726462}
-  audioSource: {fileID: 627020525}
 --- !u!4 &269163284
 Transform:
   m_ObjectHideFlags: 0
@@ -5151,6 +5149,7 @@ MonoBehaviour:
   - {fileID: 8356534356833644314, guid: 10c914303f660c64fb751fc127c4d7c0, type: 3}
   - {fileID: 8356534356833644314, guid: c80a78cba504d82499f9b7299acb06be, type: 3}
   - {fileID: 8356534356833644314, guid: 3861851f1e751654fbd6936372b0483c, type: 3}
+  enemyController: {fileID: 0}
   enemiesList: []
   phasesList:
     phases: []
@@ -5793,6 +5792,8 @@ MonoBehaviour:
   actualMult: 1
   cantNotes: 5
   totalPoints: 0
+  multSlider: {fileID: 0}
+  hpSlider: {fileID: 0}
   multiplierTxt: {fileID: 1648994428}
   pointsTxt: {fileID: 760017847}
 --- !u!82 &983176796
@@ -5909,6 +5910,8 @@ MonoBehaviour:
   invulnerableTime: 3
   invulnerableM: {fileID: 2100000, guid: 39ca5ea14972fbc48979a6cea996d08c, type: 2}
   actualCombo: 0
+  hpSlider: {fileID: 0}
+  notesGenerator: {fileID: 0}
 --- !u!1 &1004972507
 GameObject:
   m_ObjectHideFlags: 0
@@ -6375,8 +6378,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 240.9036, y: 8.4427185}
+  m_SizeDelta: {x: -481.8073, y: 16.885}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1406746056
 MonoBehaviour:
@@ -6824,6 +6827,10 @@ PrefabInstance:
     - target: {fileID: 2399142389743611863, guid: fb0606a451553a4479d5d414f22a32de, type: 3}
       propertyPath: m_Name
       value: GreenNote
+      objectReference: {fileID: 0}
+    - target: {fileID: 2399142389743611863, guid: fb0606a451553a4479d5d414f22a32de, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6343815072453013998, guid: fb0606a451553a4479d5d414f22a32de, type: 3}
       propertyPath: m_IsKinematic
