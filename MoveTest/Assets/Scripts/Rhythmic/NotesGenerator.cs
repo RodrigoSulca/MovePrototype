@@ -14,7 +14,7 @@ public class NotesGenerator : MonoBehaviour
     public GameObject[] notePrefabs;
 
     public NotesList notesList;
-    private HashSet<int> notasGeneradas = new HashSet<int>(); // 🔄 Para evitar notas duplicadas
+    private HashSet<int> notasGeneradas = new();
     public float tiempoActual;
     public Image beatImg;
     public float beatInterval;
@@ -25,11 +25,12 @@ public class NotesGenerator : MonoBehaviour
     {
         CargarCancion();
         StartCoroutine(Beat());
-        musicEventInstance = AudioManager.instance.musicEventInstance;
+        musicEventInstance = AudioManager.instance.GetMusicEventInstance();
     }
 
     void Update()
     {
+        Debug.Log("Handle: " + musicEventInstance.handle);
         if (Input.GetKeyDown(KeyCode.Space))
         {
             ChangeInstrument();
@@ -49,7 +50,7 @@ public class NotesGenerator : MonoBehaviour
             if (!notasGeneradas.Contains(i) && notesList.notes[i].spawnTime <= tiempoActual)
             {
                 GenerarNota(notesList.notes[i]);
-                notasGeneradas.Add(i); // ✅ Marcar como generada
+                notasGeneradas.Add(i);
             }
         }
     }
@@ -57,7 +58,7 @@ public class NotesGenerator : MonoBehaviour
     void CargarCancion()
     {
         notesList = JsonUtility.FromJson<NotesList>(charts[(int)instrument].text);
-        notasGeneradas.Clear(); // 🔄 Reiniciar cuando se carga un nuevo chart
+        notasGeneradas.Clear();
         if (notesList != null && notesList.notes != null)
         {
             Debug.Log("Notas cargadas: " + notesList.notes.Length);

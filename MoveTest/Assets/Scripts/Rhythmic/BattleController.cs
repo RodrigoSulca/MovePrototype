@@ -21,8 +21,7 @@ public class BattleController : MonoBehaviour
         battleSlider.value = battlePoints;
         if (battleSlider.value <= battleSlider.minValue)
         {
-            //gameOverPanel.SetActive(true);
-            Time.timeScale = 0;
+
         }
     }
     private IEnumerator EnemyPoints()
