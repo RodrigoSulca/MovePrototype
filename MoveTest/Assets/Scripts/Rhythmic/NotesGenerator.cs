@@ -7,7 +7,7 @@ using FMOD.Studio;
 
 public class NotesGenerator : MonoBehaviour
 {
-    public enum Instrument { I1, I2 }
+    public enum Instrument { I1, I2,I3 }
     public Instrument instrument;
     public TextAsset[] charts;
     public Transform[] lines;
@@ -30,7 +30,6 @@ public class NotesGenerator : MonoBehaviour
 
     void Update()
     {
-        Debug.Log("Handle: " + musicEventInstance.handle);
         if (Input.GetKeyDown(KeyCode.Space))
         {
             ChangeInstrument();

@@ -37,7 +37,7 @@ public class MultiplierController : MonoBehaviour
 
     public void FailNote()
     {
-        comboRewards.actualCombo = 0;
+        comboRewards.ResetCombo();
         actualMult = 1;
         cantNotes = initCantNotes;
         AudioManager.instance.PlayOneShot(FMODEvents.instance.noteFailed, this.transform.position);
