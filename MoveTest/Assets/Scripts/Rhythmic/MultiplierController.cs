@@ -1,6 +1,5 @@
 using TMPro;
 using UnityEngine;
-
 public class MultiplierController : MonoBehaviour
 {
     public int actualMult;
@@ -41,6 +40,6 @@ public class MultiplierController : MonoBehaviour
         comboRewards.actualCombo = 0;
         actualMult = 1;
         cantNotes = initCantNotes;
-        audioSource.Play();
+        AudioManager.instance.PlayOneShot(FMODEvents.instance.noteFailed, this.transform.position);
     }
 }

@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine.UI;
 using DG.Tweening;
 using System.Collections.Generic;
+using FMOD.Studio;
 
 public class NotesGenerator : MonoBehaviour
 {
@@ -17,14 +18,14 @@ public class NotesGenerator : MonoBehaviour
     public float tiempoActual;
     public Image beatImg;
     public float beatInterval;
-    public AudioSource audioSource;
     public HitNotes hitNotes;
+    private EventInstance musicEventInstance;
 
     void Start()
     {
         CargarCancion();
-        audioSource.Play();
         StartCoroutine(Beat());
+        musicEventInstance = AudioManager.instance.musicEventInstance;
     }
 
     void Update()
@@ -39,7 +40,9 @@ public class NotesGenerator : MonoBehaviour
             return;
         }
 
-        tiempoActual = audioSource.time;
+        int timelinePosition;
+        musicEventInstance.getTimelinePosition(out timelinePosition);
+        tiempoActual = timelinePosition / 1000f;
 
         for (int i = 0; i < notesList.notes.Length; i++)
         {
