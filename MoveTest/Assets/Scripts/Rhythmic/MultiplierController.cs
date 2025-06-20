@@ -1,10 +1,13 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 public class MultiplierController : MonoBehaviour
 {
     public int actualMult;
     public int cantNotes;
     public int totalPoints;
+    public Slider multSlider;
+    public Slider hpSlider;
     private int initCantNotes;
     public TMP_Text multiplierTxt;
     public TMP_Text pointsTxt;
@@ -16,20 +19,24 @@ public class MultiplierController : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         comboRewards = GetComponent<ComboRewards>();
         initCantNotes = cantNotes;
+        multSlider.maxValue = initCantNotes;
     }
 
     // Update is called once per frame
     void Update()
     {
+        multSlider.value = comboRewards.actualCombo;
         CheckMult();
         multiplierTxt.text = $"x{actualMult}";
         pointsTxt.text = totalPoints.ToString();
+        multSlider.maxValue = cantNotes;
     }
 
     void CheckMult()
     {
         if (comboRewards.actualCombo >= cantNotes && actualMult < 4)
         {
+            multSlider.minValue = cantNotes;
             cantNotes += initCantNotes;
             actualMult++;
         }
@@ -37,7 +44,7 @@ public class MultiplierController : MonoBehaviour
 
     public void FailNote()
     {
-        comboRewards.actualCombo = 0;
+        comboRewards.ResetCombo();
         actualMult = 1;
         cantNotes = initCantNotes;
         AudioManager.instance.PlayOneShot(FMODEvents.instance.noteFailed, this.transform.position);

@@ -9,6 +9,8 @@ public class FMODEvents : MonoBehaviour
 
     [field: Header("SFX")]
     [field: SerializeField] public EventReference noteFailed { get; private set; }
+    [field: Header("PowerUps SFX")]
+    [field: SerializeField] public EventReference Invulnerable { get; private set; }
     public static FMODEvents instance { get; private set; }
 
     private void Awake()

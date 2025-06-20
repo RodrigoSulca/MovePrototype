@@ -7,14 +7,14 @@ using FMOD.Studio;
 
 public class NotesGenerator : MonoBehaviour
 {
-    public enum Instrument { I1, I2 }
+    public enum Instrument { I1, I2,I3 }
     public Instrument instrument;
     public TextAsset[] charts;
     public Transform[] lines;
     public GameObject[] notePrefabs;
 
     public NotesList notesList;
-    private HashSet<int> notasGeneradas = new HashSet<int>(); // 🔄 Para evitar notas duplicadas
+    private HashSet<int> notasGeneradas = new();
     public float tiempoActual;
     public Image beatImg;
     public float beatInterval;
@@ -24,8 +24,9 @@ public class NotesGenerator : MonoBehaviour
     void Start()
     {
         CargarCancion();
-        StartCoroutine(Beat());
-        musicEventInstance = AudioManager.instance.musicEventInstance;
+        AudioManager.instance.InitializeSong(FMODEvents.instance.song);
+        musicEventInstance = AudioManager.instance.GetMusicEventInstance();
+        musicEventInstance.start();
     }
 
     void Update()
@@ -49,7 +50,7 @@ public class NotesGenerator : MonoBehaviour
             if (!notasGeneradas.Contains(i) && notesList.notes[i].spawnTime <= tiempoActual)
             {
                 GenerarNota(notesList.notes[i]);
-                notasGeneradas.Add(i); // ✅ Marcar como generada
+                notasGeneradas.Add(i);
             }
         }
     }
@@ -57,7 +58,7 @@ public class NotesGenerator : MonoBehaviour
     void CargarCancion()
     {
         notesList = JsonUtility.FromJson<NotesList>(charts[(int)instrument].text);
-        notasGeneradas.Clear(); // 🔄 Reiniciar cuando se carga un nuevo chart
+        notasGeneradas.Clear();
         if (notesList != null && notesList.notes != null)
         {
             Debug.Log("Notas cargadas: " + notesList.notes.Length);
