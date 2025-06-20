@@ -31,11 +31,6 @@ public class AudioManager : MonoBehaviour
         masterBus = RuntimeManager.GetBus("bus:/");
         musicBus = RuntimeManager.GetBus("bus:/Music");
         sfxBus = RuntimeManager.GetBus("bus:/SFX");
-        InitializeSong(FMODEvents.instance.song);
-    }
-
-    private void Start()
-    {
         //InitializeSong(FMODEvents.instance.song);
     }
 
@@ -51,10 +46,9 @@ public class AudioManager : MonoBehaviour
         RuntimeManager.PlayOneShot(sound, worldPos);
     }
 
-    private void InitializeSong(EventReference musicEventReference)
+    public void InitializeSong(EventReference musicEventReference)
     {
         musicEventInstance = CreateInstance(musicEventReference);
-        musicEventInstance.start();
     }
 
     public void PauseMusic()

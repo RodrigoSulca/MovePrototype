@@ -24,8 +24,9 @@ public class NotesGenerator : MonoBehaviour
     void Start()
     {
         CargarCancion();
-        StartCoroutine(Beat());
+        AudioManager.instance.InitializeSong(FMODEvents.instance.song);
         musicEventInstance = AudioManager.instance.GetMusicEventInstance();
+        musicEventInstance.start();
     }
 
     void Update()
