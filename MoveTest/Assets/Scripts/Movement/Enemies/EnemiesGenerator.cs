@@ -8,18 +8,19 @@ public class EnemiesGenerator : MonoBehaviour
     public TextAsset chart;
     public Transform[] rows;
     public GameObject[] enemyPrefabs;
-
+    public EnemyController enemyController;
     public EnemiesList[] enemiesList;
     public PhasesList phasesList;
     private int enemyIndex = 0;
     private int phaseIndex = 0;
+    private int controllerIndex = 0;
     private float tiempoInicio;
 
     void Start()
     {
         CargarFases();
         CargarEnemigos();
-        tiempoInicio = Time.time;
+        tiempoInicio = Time.time; // 1800
     }
 
     void Update()
@@ -33,10 +34,13 @@ public class EnemiesGenerator : MonoBehaviour
 
         while (enemyIndex < enemiesList[phaseIndex].enemies.Length && enemiesList[phaseIndex].enemies[enemyIndex].spawnTime <= tiempoActual)
         {
+            // Auxiliares
+            Enemy n_enemy = enemiesList[phaseIndex].enemies[enemyIndex];
+            Phase n_phase = phasesList.phases[phaseIndex];
             // Creamos enemigos siempre que spawnTime este dentro del tiempo de la fase
-            if (enemiesList[phaseIndex].enemies[enemyIndex].spawnTime <= phasesList.phases[phaseIndex].finish)
+            if (n_enemy.spawnTime <= n_phase.finish)
             {
-                GenerarEnemigo(enemiesList[phaseIndex].enemies[enemyIndex]);
+                GenerarEnemigo(n_enemy, n_phase.spawnRow[enemyIndex]);
                 enemyIndex++;
             }
             else
@@ -81,7 +85,6 @@ public class EnemiesGenerator : MonoBehaviour
             enemiesList = new EnemiesList[phasesList.phases.Length];
             for (int i = 0; i < phasesList.phases.Length; i++) // Recorremos las fases
             {
-                Debug.Log("Fase:" + phasesList.phases[i].phaseId);
                 enemiesList[i] = new EnemiesList();
                 enemiesList[i].enemies = new Enemy[phasesList.phases[i].enemyId.Length];
                 for (int j = 0; j < phasesList.phases[i].enemyId.Length; j++) // Recorremos las IDs de los enemigos de cada fase
@@ -89,20 +92,19 @@ public class EnemiesGenerator : MonoBehaviour
                     Enemy enemy_data = new();
                     // Generamos la data del Enemigo
                     enemy_data.enemyId = phasesList.phases[i].enemyId[j];
-                    //Debug.Log("Enemigo:" + enemy_data.enemyId);
                     // Temporal, esto debe ser cargado desde la DB interna de enemigos
-                    if (enemy_data.enemyId == 2) enemy_data.speed = 5;
-                    else if (enemy_data.enemyId == 3) enemy_data.speed = 1;
-                    Debug.Log("Velocidad:" + enemy_data.speed);
+                    if (enemy_data.enemyId == 1) enemy_data.speed = (float)1.8;
+                    else if (enemy_data.enemyId == 2) enemy_data.speed = 3;
+                    else if (enemy_data.enemyId == 3) enemy_data.speed = 2;
                     // =====
-                    enemy_data.spawnRow = phasesList.phases[i].spawnRow[j];
-                    Debug.Log("Columna:" + enemy_data.spawnRow);
                     enemy_data.spawnTime = phasesList.phases[i].start + phasesList.phases[i].spawnTime[j];
-                    Debug.Log("Tiempo:" + enemy_data.spawnTime);
-                    Debug.Log("i:" + i + ", j:" + j);
                     // Asignamos el enemigo a la lista
                     enemiesList[i].enemies[j] = enemy_data;
-                    Debug.Log("Se añadio 1 enemigo a la lista:" + i);
+                    // Debug.Log("Enemigo:" + enemy_data.enemyId);
+                    // Debug.Log("Velocidad:" + enemy_data.speed);
+                    // Debug.Log("Columna:" + enemy_data.spawnRow);
+                    // Debug.Log("Tiempo:" + enemy_data.spawnTime);
+                    // Debug.Log("Se añadio 1 enemigo a la lista:" + i);
                 }
                 Debug.Log("Lista de enemigos " + i + " creada con exito.");
             }
@@ -112,11 +114,11 @@ public class EnemiesGenerator : MonoBehaviour
             Debug.LogError("No se cargo la lista de fases.");
         }
     }
-    void GenerarEnemigo(Enemy enemy) // añadir datos de la fase
+    void GenerarEnemigo(Enemy enemy, int row) // añadir datos de la fase
     {
-        if (enemy.spawnRow < 1 || enemy.spawnRow > rows.Length)
+        if (row < 1 || row > rows.Length)
         {
-            Debug.LogWarning("Línea inválida: " + enemy.spawnRow);
+            Debug.LogWarning("Línea inválida: " + row);
             return;
         }
         if (enemy.enemyId < 1 || enemy.enemyId > 4)   // 3 Tipos de enemigos - Red(1), Blue(2) y Green(3)
@@ -124,7 +126,14 @@ public class EnemiesGenerator : MonoBehaviour
             Debug.LogWarning("ID de enemigo inválido: " + enemy.enemyId);
             return;
         }
-        Transform posicionline = rows[enemy.spawnRow - 1];
+        Transform posicionline = rows[row - 1];
         Instantiate(enemyPrefabs[enemy.enemyId - 1], posicionline.position, Quaternion.identity);
+        enemyController = enemyPrefabs[enemy.enemyId - 1].GetComponent<EnemyController>();
+        // Asignamos velocidades iniciales a los enemigos
+        if (enemyController != null)
+        {
+            enemyController.speed = enemy.speed;
+            controllerIndex++;
+        }
     }
 }

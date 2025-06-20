@@ -4,7 +4,6 @@ using UnityEngine;
 public class Enemy
 {
     public int enemyId;
-    public int speed;
-    public int spawnRow;
+    public float speed;
     public float spawnTime;
 }
