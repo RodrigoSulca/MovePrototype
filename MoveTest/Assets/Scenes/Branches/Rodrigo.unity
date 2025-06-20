@@ -5930,7 +5930,7 @@ MonoBehaviour:
   - {fileID: 119670679}
   notePrefabs:
   - {fileID: 2399142389743611863, guid: fb0606a451553a4479d5d414f22a32de, type: 3}
-  - {fileID: 6713943089359731223, guid: 8d61c1b7a597a4f4a90a752f7660b43a, type: 3}
+  - {fileID: 8522105898475668009, guid: f6a2957a023e72340b67e1817db49afb, type: 3}
   - {fileID: 5445722874474816019, guid: c2e1172c907400f4d96d9d808cc8e03b, type: 3}
   notesList:
     notes: []
