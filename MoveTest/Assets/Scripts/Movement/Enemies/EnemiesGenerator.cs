@@ -54,13 +54,17 @@ public class EnemiesGenerator : MonoBehaviour
                 }
                 break;
             }
+            // Logica de enemigos
+            // Despues de 2 segundos, el Enemigo Azul aumenta su velocidad
+            // for (int i = 0; i <= enemyIndex; i++) // Recorrer enemigos existentes
+            // {
+            //     for (int j = 0; j <= phaseIndex; j++) // Recorrer fases existentes
+            //     {
+            //         Enemy test = enemiesList[j].enemies[i];
+            //         if (tiempoActual <= (test.spawnTime + 2) && test.enemyId == 2) AumentarVelocidad(i, j);
+            //     }
+            // }
         }
-
-        // if (enemyIndex >= enemiesList.enemies.Length){ // Test para reiniciar
-        //     enemyIndex = 0;
-        //     tiempoInicio = Time.time;
-        //     Debug.Log("Reiniciando chart...");
-        // }
     }
 
     void CargarFases()
@@ -133,7 +137,10 @@ public class EnemiesGenerator : MonoBehaviour
         if (enemyController != null)
         {
             enemyController.speed = enemy.speed;
-            controllerIndex++;
         }
     }
+    // void AumentarVelocidad(int eId, int pId)
+    // {
+    //     enemyController[pId][eId].speed = 1;
+    // }
 }
