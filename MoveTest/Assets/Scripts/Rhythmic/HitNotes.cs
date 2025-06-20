@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class HitNotes : MonoBehaviour
@@ -7,6 +8,8 @@ public class HitNotes : MonoBehaviour
     public ComboRewards comboRewards;
 
     public Material[] materials;
+    public GameObject textPrefab;
+    public Transform textSpawner;
     private bool active;
     [HideInInspector] public Renderer mRenderer;
     [HideInInspector] public Material defaultMaterial;
@@ -30,7 +33,7 @@ public class HitNotes : MonoBehaviour
             active = false;
         }
     }
-    
+
 
     void OnTriggerStay(Collider other)
     {
@@ -38,6 +41,14 @@ public class HitNotes : MonoBehaviour
         {
             comboRewards.actualCombo++;
             other.GetComponent<NoteController>().PlayNote();
+            NoteText("Hit!");
         }
+    }
+
+    public void NoteText(string text)
+    {
+        GameObject noteTxt = Instantiate(textPrefab, textSpawner.position, textPrefab.transform.rotation, gameObject.transform);
+        noteTxt.GetComponent<TMP_Text>().text = text;
+        Destroy(noteTxt, 0.5f);
     }
 }

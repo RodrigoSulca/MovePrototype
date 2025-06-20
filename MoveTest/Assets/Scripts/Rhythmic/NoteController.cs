@@ -4,6 +4,7 @@ public class NoteController : MonoBehaviour
 {
     public float speed;
     public int points;
+    private HitNotes hitNotes;
     private GameObject endPoint;
     private MultiplierController multiplierController;
     private Rigidbody rb;
@@ -11,6 +12,7 @@ public class NoteController : MonoBehaviour
     {
         endPoint = GameObject.FindWithTag("EndPoint");
         multiplierController = GameObject.FindWithTag("MultiplierM").GetComponent<MultiplierController>();
+        hitNotes = GameObject.FindWithTag("NoteHitter").GetComponent<HitNotes>();
         MoveDown();
     }
 
@@ -22,6 +24,7 @@ public class NoteController : MonoBehaviour
             if (gameObject.CompareTag("Note"))
             {
                 multiplierController.FailNote();
+                hitNotes.NoteText("Miss");
             }
             Destroy(gameObject);
         });
