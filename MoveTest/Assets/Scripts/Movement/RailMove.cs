@@ -6,6 +6,7 @@ public class RailMove : MonoBehaviour
     public float moveTime;
     public bool onHorse;
     public GameObject dmgPanel;
+    public AudioSource audioSource;
     private int railIndex;
     private bool isMoving;
     private Rigidbody rb;
@@ -56,6 +57,8 @@ public class RailMove : MonoBehaviour
         }
         else if (other.CompareTag("Enemy") && !onHorse)
         {
+            Destroy(other.gameObject);
+            audioSource.Stop();
             Time.timeScale = 0;
         }
     }

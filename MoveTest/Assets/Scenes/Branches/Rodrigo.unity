@@ -220,9 +220,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a5e6a30800fe9e4bb15e9364778399d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputKey: 104
+  inputKey: 108
   activeMaterial: {fileID: 2100000, guid: 93a754d7d1dcf594888236a59202ebd0, type: 2}
   comboRewards: {fileID: 983176797}
+  materials:
+  - {fileID: 2100000, guid: 48a6ca1919ced9e42a9c6293c9a6d788, type: 2}
+  - {fileID: 2100000, guid: d945718ba3f283d458ed0e50e3fc0fd5, type: 2}
+  - {fileID: 2100000, guid: 1702e071a58f2934c988bfccf74542b5, type: 2}
+  mRenderer: {fileID: 0}
+  defaultMaterial: {fileID: 0}
 --- !u!54 &81368751
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2347,6 +2353,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HorseModel
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a783ce24bbcb8e042bf367dc16899cf8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 929827029341718963, guid: a783ce24bbcb8e042bf367dc16899cf8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: -7.2532625
@@ -4284,6 +4294,7 @@ MonoBehaviour:
   moveTime: 0.2
   onHorse: 1
   dmgPanel: {fileID: 946726462}
+  audioSource: {fileID: 0}
 --- !u!54 &256822359
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4397,6 +4408,7 @@ MonoBehaviour:
   moveTime: 0.2
   onHorse: 1
   dmgPanel: {fileID: 946726462}
+  audioSource: {fileID: 627020525}
 --- !u!4 &269163284
 Transform:
   m_ObjectHideFlags: 0
@@ -5337,18 +5349,19 @@ MonoBehaviour:
   instrument: 0
   charts:
   - {fileID: 4900000, guid: c81b430a1d9c2e442a9f8a0fac682bf9, type: 3}
-  - {fileID: 4900000, guid: f5c8b4fca387db44b80ff80ee4b31336, type: 3}
+  - {fileID: 4900000, guid: 06eb25212180d8541a2c66a9684a6978, type: 3}
   lines:
   - {fileID: 119670679}
   notePrefabs:
   - {fileID: 2399142389743611863, guid: fb0606a451553a4479d5d414f22a32de, type: 3}
+  - {fileID: 6713943089359731223, guid: 8d61c1b7a597a4f4a90a752f7660b43a, type: 3}
   notesList:
     notes: []
-  indiceNotaActual: 0
   tiempoActual: 0
   beatImg: {fileID: 1220605591}
   beatInterval: 0.6
   audioSource: {fileID: 627020525}
+  hitNotes: {fileID: 81368750}
 --- !u!1 &813870535
 GameObject:
   m_ObjectHideFlags: 0
@@ -7152,5 +7165,5 @@ SceneRoots:
   - {fileID: 1948957213}
   - {fileID: 1255090158}
   - {fileID: 627020524}
-  - {fileID: 1805279425}
   - {fileID: 213339211}
+  - {fileID: 1805279425}

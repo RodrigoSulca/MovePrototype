@@ -2,21 +2,23 @@ using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 using DG.Tweening;
+using System.Collections.Generic;
 
 public class NotesGenerator : MonoBehaviour
 {
-    public enum Instrument { I1, I2}
+    public enum Instrument { I1, I2 }
     public Instrument instrument;
     public TextAsset[] charts;
     public Transform[] lines;
     public GameObject[] notePrefabs;
 
     public NotesList notesList;
-    public int indiceNotaActual = 0;
+    private HashSet<int> notasGeneradas = new HashSet<int>(); // 🔄 Para evitar notas duplicadas
     public float tiempoActual;
     public Image beatImg;
     public float beatInterval;
     public AudioSource audioSource;
+    public HitNotes hitNotes;
 
     void Start()
     {
@@ -32,29 +34,27 @@ public class NotesGenerator : MonoBehaviour
             ChangeInstrument();
         }
 
-        if (notesList == null || indiceNotaActual >= notesList.notes.Length)
+        if (notesList == null || notesList.notes == null)
         {
             return;
         }
 
         tiempoActual = audioSource.time;
 
-        while (indiceNotaActual < notesList.notes.Length && notesList.notes[indiceNotaActual].spawnTime <= tiempoActual)
+        for (int i = 0; i < notesList.notes.Length; i++)
         {
-            GenerarNota(notesList.notes[indiceNotaActual]);
-            indiceNotaActual++;
-        }
-
-        if (indiceNotaActual >= notesList.notes.Length)
-        {
-            /*indiceNotaActual = 0;
-            Debug.Log("Reiniciando chart...");*/
+            if (!notasGeneradas.Contains(i) && notesList.notes[i].spawnTime <= tiempoActual)
+            {
+                GenerarNota(notesList.notes[i]);
+                notasGeneradas.Add(i); // ✅ Marcar como generada
+            }
         }
     }
 
     void CargarCancion()
     {
         notesList = JsonUtility.FromJson<NotesList>(charts[(int)instrument].text);
+        notasGeneradas.Clear(); // 🔄 Reiniciar cuando se carga un nuevo chart
         if (notesList != null && notesList.notes != null)
         {
             Debug.Log("Notas cargadas: " + notesList.notes.Length);
@@ -70,21 +70,23 @@ public class NotesGenerator : MonoBehaviour
         }
 
         Transform posicionline = lines[nota.line - 1];
-        Instantiate(notePrefabs[nota.line - 1], posicionline.position, Quaternion.identity);
+        Instantiate(notePrefabs[(int)instrument], posicionline.position, Quaternion.identity);
     }
-    
+
     void ChangeInstrument()
     {
         instrument = (Instrument)(((int)instrument + 1) % System.Enum.GetValues(typeof(Instrument)).Length);
+        hitNotes.defaultMaterial = hitNotes.materials[(int)instrument];
+        hitNotes.mRenderer.material = hitNotes.defaultMaterial;
         CargarCancion();
         Debug.Log("Instrumento actual: " + instrument);
     }
 
-    private IEnumerator Beat(){
-        beatImg.DOFade(0,0.3f);
+    private IEnumerator Beat()
+    {
+        beatImg.DOFade(0, 0.3f);
         yield return new WaitForSeconds(beatInterval);
         beatImg.color = Color.white;
         StartCoroutine(Beat());
     }
-
 }

@@ -5,9 +5,11 @@ public class HitNotes : MonoBehaviour
     public KeyCode inputKey;
     public Material activeMaterial;
     public ComboRewards comboRewards;
+
+    public Material[] materials;
     private bool active;
-    private Renderer mRenderer;
-    private Material defaultMaterial;
+    [HideInInspector] public Renderer mRenderer;
+    [HideInInspector] public Material defaultMaterial;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -28,6 +30,7 @@ public class HitNotes : MonoBehaviour
             active = false;
         }
     }
+    
 
     void OnTriggerStay(Collider other)
     {
