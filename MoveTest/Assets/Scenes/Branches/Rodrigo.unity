@@ -6480,6 +6480,7 @@ MonoBehaviour:
   cantNotes: 5
   totalPoints: 0
   multSlider: {fileID: 1254995639}
+  hpSlider: {fileID: 348955293}
   multiplierTxt: {fileID: 1648994428}
   pointsTxt: {fileID: 760017847}
 --- !u!114 &983176797

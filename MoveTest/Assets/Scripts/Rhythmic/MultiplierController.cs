@@ -7,6 +7,7 @@ public class MultiplierController : MonoBehaviour
     public int cantNotes;
     public int totalPoints;
     public Slider multSlider;
+    public Slider hpSlider;
     private int initCantNotes;
     public TMP_Text multiplierTxt;
     public TMP_Text pointsTxt;
