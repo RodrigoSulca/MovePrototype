@@ -14,6 +14,7 @@ public class NoteController : MonoBehaviour
         multiplierController = GameObject.FindWithTag("MultiplierM").GetComponent<MultiplierController>();
         hitNotes = GameObject.FindWithTag("NoteHitter").GetComponent<HitNotes>();
         MoveDown();
+        
     }
 
     void MoveDown()

@@ -73,13 +73,15 @@ public class NotesGenerator : MonoBehaviour
         }
 
         Transform posicionline = lines[nota.line - 1];
-        Instantiate(notePrefabs[(int)instrument], posicionline.position, Quaternion.identity);
+        GameObject nuevaNota = Instantiate(notePrefabs[(int)instrument], posicionline.position, Quaternion.identity);
+        Debug.Log("✅ Nota instanciada correctamente");
     }
+
 
     void ChangeInstrument()
     {
         instrument = (Instrument)(((int)instrument + 1) % System.Enum.GetValues(typeof(Instrument)).Length);
-        hitNotes.defaultMaterial = hitNotes.materials[(int)instrument];
+        //hitNotes.defaultMaterial = hitNotes.materials[(int)instrument];
         hitNotes.mRenderer.material = hitNotes.defaultMaterial;
         CargarCancion();
         Debug.Log("Instrumento actual: " + instrument);
