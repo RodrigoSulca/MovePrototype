@@ -6496,6 +6496,7 @@ MonoBehaviour:
   multiplierTxt: {fileID: 1648994428}
   pointsTxt: {fileID: 760017847}
   feedback: {fileID: 81368753}
+  hitNotes: {fileID: 81368750}
   beatFlash: {fileID: 1703072849}
 --- !u!114 &983176797
 MonoBehaviour:

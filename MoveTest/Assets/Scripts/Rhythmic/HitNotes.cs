@@ -9,8 +9,8 @@ public class HitNotes : MonoBehaviour
     
     
 
-    public GameObject textPrefab;      // Texto 3D opcional
-    public Transform textSpawner;      // Punto para texto 3D
+    public GameObject textPrefab;
+    public Transform textSpawner;
 
     private bool active;
     [HideInInspector] public Renderer mRenderer;
@@ -53,20 +53,10 @@ public class HitNotes : MonoBehaviour
             active = false;
         }
     }
-
-    // Texto flotante (UI Canvas)
-    
-
-
-
-    // Texto 3D opcional (si usas uno)
     public void NoteText(string text)
     {
-        if (textPrefab != null && textSpawner != null)
-        {
-            GameObject noteTxt = Instantiate(textPrefab, textSpawner.position, textPrefab.transform.rotation, transform);
-            noteTxt.GetComponent<TMP_Text>().text = text;
-            Destroy(noteTxt, 0.5f);
-        }
+        GameObject noteTxt = Instantiate(textPrefab, textSpawner.position, textPrefab.transform.rotation, transform);
+        noteTxt.GetComponent<TMP_Text>().text = text;
+        Destroy(noteTxt, 0.5f);
     }
 }
