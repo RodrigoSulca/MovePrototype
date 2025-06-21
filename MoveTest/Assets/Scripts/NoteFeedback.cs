@@ -11,20 +11,18 @@ public class NoteFeedback : MonoBehaviour
 
     void Start()
     {
-        meshRenderer = GetComponent<MeshRenderer>();
-        originalMaterial = meshRenderer.material;
+
     }
 
     public void ShowFeedback(bool isCorrect)
     {
-        StopAllCoroutines();
-        StartCoroutine(FlashMaterial(isCorrect ? successMaterial : failMaterial));
+       
     }
 
     System.Collections.IEnumerator FlashMaterial(Material mat)
     {
-        meshRenderer.material = mat;
+        
         yield return new WaitForSeconds(duration);
-        meshRenderer.material = originalMaterial;
+        
     }
 }

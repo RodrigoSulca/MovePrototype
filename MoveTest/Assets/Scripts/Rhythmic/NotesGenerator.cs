@@ -81,7 +81,7 @@ public class NotesGenerator : MonoBehaviour
     void ChangeInstrument()
     {
         instrument = (Instrument)(((int)instrument + 1) % System.Enum.GetValues(typeof(Instrument)).Length);
-        //hitNotes.defaultMaterial = hitNotes.materials[(int)instrument];
+        hitNotes.defaultMaterial = hitNotes.materials[(int)instrument];
         hitNotes.mRenderer.material = hitNotes.defaultMaterial;
         CargarCancion();
         Debug.Log("Instrumento actual: " + instrument);

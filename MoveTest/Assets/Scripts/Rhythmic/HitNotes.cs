@@ -1,14 +1,14 @@
 using TMPro;
 using UnityEngine;
-
+using DG.Tweening;
+using UnityEditor.SpeedTree.Importer;
 public class HitNotes : MonoBehaviour
 {
     public KeyCode inputKey;
     public Material activeMaterial;
     public ComboRewards comboRewards;
-    
-    
 
+    public Material[] materials;
     public GameObject textPrefab;
     public Transform textSpawner;
 
@@ -46,10 +46,8 @@ public class HitNotes : MonoBehaviour
         {
             comboRewards.actualCombo++;
             other.GetComponent<NoteController>().PlayNote();
-
-        
-
-            mRenderer.material = defaultMaterial;
+            NoteText("Hit!");
+            //mRenderer.material = defaultMaterial;
             active = false;
         }
     }

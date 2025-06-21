@@ -58,10 +58,10 @@ public class ComboRewards : MonoBehaviour
 
     private IEnumerator Invulnerable()
     {
-        playerColl.isTrigger = true;
+        playerColl.enabled = false;
         playerRenderer.material = invulnerableM;
         yield return new WaitForSeconds(invulnerableTime);
-        playerColl.isTrigger = false;
+        playerColl.enabled = true;
         playerRenderer.material = normalMaterial;
     }
 

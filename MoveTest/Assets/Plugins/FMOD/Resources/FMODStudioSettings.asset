@@ -609,8 +609,8 @@ MonoBehaviour:
   switchSettingsMigration: 1
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: ../../../../Downloads/AudioSystem/AudioSystem/AudioSystem.fspro
-  sourceBankPath: ../../../../Downloads/AudioSystem/AudioSystem/Build
+  sourceProjectPath: ../../../../../Downloads/AudioSystem/AudioSystem/AudioSystem.fspro
+  sourceBankPath: ../../../../../Downloads/AudioSystem/AudioSystem/Build
   sourceBankPathUnformatted: 
   BankRefreshCooldown: 5
   ShowBankRefreshWindow: 1

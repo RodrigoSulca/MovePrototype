@@ -97,7 +97,7 @@ public class EnemiesGenerator : MonoBehaviour
                     // Generamos la data del Enemigo
                     enemy_data.enemyId = phasesList.phases[i].enemyId[j];
                     // Temporal, esto debe ser cargado desde la DB interna de enemigos
-                    if (enemy_data.enemyId == 1) enemy_data.speed = (float)2.5;
+                    if (enemy_data.enemyId == 1) enemy_data.speed = (float)3;
                     else if (enemy_data.enemyId == 2) enemy_data.speed = (float)3.5;
                     else if (enemy_data.enemyId == 3) enemy_data.speed = 2;
                     // =====

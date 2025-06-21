@@ -6,6 +6,7 @@ public class RailMove : MonoBehaviour
     public float moveTime;
     public bool onHorse;
     public GameObject dmgPanel;
+    public bool armor;
     private int railIndex;
     private bool isMoving;
     private Rigidbody rb;
@@ -46,11 +47,19 @@ public class RailMove : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Enemy") && onHorse)
+        if (other.CompareTag("Enemy") && onHorse && !armor)
         {
             moveTime = 0.5f;
             dmgPanel.SetActive(true);
             onHorse = false;
+            transform.DOKill();
+            Destroy(other.gameObject);
+        }
+        else if (other.CompareTag("Enemy") && onHorse && armor)
+        {
+            Debug.Log("Armadura perdida");
+            armor = false;
+            dmgPanel.SetActive(true);
             transform.DOKill();
             Destroy(other.gameObject);
         }
