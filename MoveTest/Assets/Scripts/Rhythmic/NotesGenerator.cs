@@ -75,7 +75,6 @@ public class NotesGenerator : MonoBehaviour
 
         Transform posicionline = lines[nota.line - 1];
         GameObject nuevaNota = Instantiate(notePrefabs[(int)instrument], posicionline.position, Quaternion.identity);
-        Debug.Log("✅ Nota instanciada correctamente");
     }
 
 
