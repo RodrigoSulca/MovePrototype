@@ -1,11 +1,13 @@
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.UI;
 public class RailMove : MonoBehaviour
 {
     public GameObject[] rails;
     public float moveTime;
     public bool onHorse;
-    public GameObject dmgPanel;
+    public Image dmgPanel;
+    public Color dmgColor;
     public bool armor;
     private int railIndex;
     private bool isMoving;
@@ -49,8 +51,9 @@ public class RailMove : MonoBehaviour
     {
         if (other.CompareTag("Enemy") && onHorse && !armor)
         {
-            moveTime = 0.5f;
-            dmgPanel.SetActive(true);
+            moveTime = 0.2f;
+            dmgPanel.color = dmgColor;
+            dmgPanel.DOFade(0, 0.3f).From(1).SetEase(Ease.OutQuad);
             onHorse = false;
             transform.DOKill();
             Destroy(other.gameObject);
@@ -59,7 +62,8 @@ public class RailMove : MonoBehaviour
         {
             Debug.Log("Armadura perdida");
             armor = false;
-            dmgPanel.SetActive(true);
+            dmgPanel.color = dmgColor;
+            dmgPanel.DOFade(0, 0.3f).From(1).SetEase(Ease.OutQuad);
             transform.DOKill();
             Destroy(other.gameObject);
         }

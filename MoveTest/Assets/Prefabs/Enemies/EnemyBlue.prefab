@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 8142216985822579724}
   - component: {fileID: 7745251854773240482}
   - component: {fileID: 1706622579663191400}
-  - component: {fileID: -8302357325186535933}
   m_Layer: 0
   m_Name: EnemyBlue
   m_TagString: Enemy
@@ -30,13 +29,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8356534356833644314}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.82, y: 0.111, z: -5.446}
   m_LocalScale: {x: 1, y: 0.67036, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2046422568455709842
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -152,20 +151,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bfc3e2661a8c864baa16363dd2d59fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
---- !u!114 &-8302357325186535933
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8356534356833644314}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e741851cba3ad425c91ecf922cc6b379, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _data:
-    _json: '{"declarations":{"Kind":"Object","collection":{"$content":[{"name":"Speed","value":{"$content":0.0,"$type":"System.Single"},"typeHandle":{"Identification":"System.Single,
-      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
-    _objectReferences: []
+  type: 1
+  speed: 3.5
+  initMoveDistance: -3
+  initSpeed: 1.5
+  finalSpeed: 0.5

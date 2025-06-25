@@ -56,6 +56,6 @@ public class MultiplierController : MonoBehaviour
                 feedback.ShowFeedback(false);
 
         if (beatFlash != null)
-                beatFlash.Flash(Color.red);
+                beatFlash.Flash();
     }
 }

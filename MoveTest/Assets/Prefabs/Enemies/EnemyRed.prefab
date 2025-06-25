@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 8142216985822579724}
   - component: {fileID: 7745251854773240482}
   - component: {fileID: 1706622579663191400}
-  - component: {fileID: 6070193838727980630}
   m_Layer: 0
   m_Name: EnemyRed
   m_TagString: Enemy
@@ -152,20 +151,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bfc3e2661a8c864baa16363dd2d59fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
---- !u!114 &6070193838727980630
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8356534356833644314}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e741851cba3ad425c91ecf922cc6b379, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _data:
-    _json: '{"declarations":{"Kind":"Object","collection":{"$content":[{"name":"Speed","value":{"$content":0.0,"$type":"System.Single"},"typeHandle":{"Identification":"System.Single,
-      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
-    _objectReferences: []
+  type: 0
+  speed: 3
+  initMoveDistance: 0
+  initSpeed: 0
+  finalSpeed: 0

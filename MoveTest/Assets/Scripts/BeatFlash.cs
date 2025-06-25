@@ -4,6 +4,7 @@ using DG.Tweening;
 
 public class BeatFlash : MonoBehaviour
 {
+    public Color flashColor;
     private Image img;
 
     void Awake()
@@ -11,9 +12,9 @@ public class BeatFlash : MonoBehaviour
         img = GetComponent<Image>();
     }
 
-    public void Flash(Color color)
+    public void Flash()
     {
-        img.color = color;
+        img.color = flashColor;
         img.DOFade(0, 0.3f).From(1).SetEase(Ease.OutQuad);
     }
 }
