@@ -39,6 +39,6 @@ public class NoteTimer : MonoBehaviour
         string json = JsonHelper.ToJson(noteList.ToArray(), true);
         string path = Path.Combine(Application.dataPath, "chart.json");
         File.WriteAllText(path, json);
-        Debug.Log("¡Chart guardado en: " + path + " con " + noteList.Count + " notas!");
+        Debug.Log("¡Chart guardado en: " + path + " con " + noteList.Count + " notas");
     }
 }

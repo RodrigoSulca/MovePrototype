@@ -3,7 +3,7 @@ using DG.Tweening;
 using Unity.Mathematics;
 public class EnemyController : MonoBehaviour
 {
-    public enum Type { Red, Blue, Green }
+    public enum Type { Green, Blue, Red }
     public Type type;
     public float speed;
     [field: Header("BlueMove")]
