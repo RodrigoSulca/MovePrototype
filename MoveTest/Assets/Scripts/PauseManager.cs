@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class PauseManager : MonoBehaviour
 {
     public GameObject volumePanel;
@@ -21,5 +21,14 @@ public class PauseManager : MonoBehaviour
                 AudioManager.instance.ResumeMusic();
             }
         }
+    }
+
+    public void Retry(){
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        Time.timeScale = 1;
+    }
+
+    public void Exit(){
+        SceneManager.LoadScene("MainMenu");
     }
 }

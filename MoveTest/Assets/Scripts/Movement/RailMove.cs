@@ -6,9 +6,12 @@ public class RailMove : MonoBehaviour
     public GameObject[] rails;
     public float moveTime;
     public bool onHorse;
+    public bool armor;
+    [Header("Death")]
     public Image dmgPanel;
     public Color dmgColor;
-    public bool armor;
+    public Image deathBg;
+    public GameObject deathPanel;
     private int railIndex;
     private bool isMoving;
     private Rigidbody rb;
@@ -52,25 +55,39 @@ public class RailMove : MonoBehaviour
         if (other.CompareTag("Enemy") && onHorse && !armor)
         {
             moveTime = 0.2f;
-            dmgPanel.color = dmgColor;
-            dmgPanel.DOFade(0, 0.3f).From(1).SetEase(Ease.OutQuad);
+            DmgFlash();
             onHorse = false;
-            transform.DOKill();
+            other.transform.DOKill();
             Destroy(other.gameObject);
         }
         else if (other.CompareTag("Enemy") && onHorse && armor)
         {
             Debug.Log("Armadura perdida");
             armor = false;
-            dmgPanel.color = dmgColor;
-            dmgPanel.DOFade(0, 0.3f).From(1).SetEase(Ease.OutQuad);
-            transform.DOKill();
+            DmgFlash();
+            other.transform.DOKill();
             Destroy(other.gameObject);
         }
         else if (other.CompareTag("Enemy") && !onHorse)
         {
+            other.transform.DOKill();
             Destroy(other.gameObject);
-            Time.timeScale = 0;
+            Death();
+            
         }
+    }
+
+    private void DmgFlash(){
+        dmgPanel.color = dmgColor;
+        dmgPanel.DOFade(0, 0.3f).From(1).SetEase(Ease.OutQuad);
+    }
+
+    private void Death(){
+        Debug.Log("PlayerDeath");
+        deathBg.DOFade(0.3f,0.5f).OnComplete(() =>
+        {
+            deathPanel.SetActive(true);
+            Time.timeScale = 0;
+        });
     }
 }

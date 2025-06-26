@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
+using System.Collections;
 
 public class BeatFlash : MonoBehaviour
 {
@@ -11,7 +12,6 @@ public class BeatFlash : MonoBehaviour
     {
         img = GetComponent<Image>();
     }
-
     public void Flash()
     {
         img.color = flashColor;

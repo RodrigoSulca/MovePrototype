@@ -33,6 +33,9 @@ public class MultiplierController : MonoBehaviour
         multiplierTxt.text = $"x{actualMult}";
         pointsTxt.text = totalPoints.ToString();
         multSlider.maxValue = cantNotes;
+        if(actualMult >= 4){
+            multSlider.value = multSlider.maxValue;
+        }
     }
 
     void CheckMult()
