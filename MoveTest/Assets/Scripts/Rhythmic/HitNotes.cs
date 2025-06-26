@@ -1,7 +1,5 @@
 using TMPro;
 using UnityEngine;
-using DG.Tweening;
-using UnityEditor.SpeedTree.Importer;
 public class HitNotes : MonoBehaviour
 {
     public KeyCode inputKey;
