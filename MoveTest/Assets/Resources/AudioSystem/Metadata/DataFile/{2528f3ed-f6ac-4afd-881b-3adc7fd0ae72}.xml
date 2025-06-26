@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="DataFile" id="{2528f3ed-f6ac-4afd-881b-3adc7fd0ae72}">
+		<property name="assetPath">
+			<value>SFX/MainMenu/Clicks/SFX_Click_Whoosh.mp3.meta</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{702a2389-bb3a-4162-a1dc-381d1514967e}</destination>
+		</relationship>
+	</object>
+</objects>

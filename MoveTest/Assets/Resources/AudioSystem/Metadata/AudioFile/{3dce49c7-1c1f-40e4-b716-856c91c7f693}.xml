@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{3dce49c7-1c1f-40e4-b716-856c91c7f693}">
+		<property name="assetPath">
+			<value>SFX/FailNote.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>24</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.30299999999999999</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{702a2389-bb3a-4162-a1dc-381d1514967e}</destination>
+		</relationship>
+	</object>
+</objects>
