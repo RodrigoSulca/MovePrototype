@@ -131,7 +131,7 @@ public class EnemiesGenerator : MonoBehaviour
             return;
         }
         Transform posicionline = rows[row - 1];
-        Instantiate(enemyPrefabs[enemy.enemyId - 1], posicionline.position, Quaternion.identity);
+        Instantiate(enemyPrefabs[enemy.enemyId - 1], posicionline.position, enemyPrefabs[enemy.enemyId - 1].transform.rotation);
         enemyController = enemyPrefabs[enemy.enemyId - 1].GetComponent<EnemyController>();
         // Asignamos velocidades iniciales a los enemigos
         if (enemyController != null)
