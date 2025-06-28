@@ -3,10 +3,12 @@ using UnityEngine.UI;
 using DG.Tweening;
 using System.Collections;
 
-public class Timer : MonoBehaviour
+public class BeatController : MonoBehaviour
 {
     public Color flashColor;
+    public float beatDuration;
     public float interval;
+    public NotesGenerator notesGenerator;
     private Image img;
 
     void Awake()
@@ -21,7 +23,11 @@ public class Timer : MonoBehaviour
     private IEnumerator FlashCoroutime()
     {
         img.color = flashColor;
-        img.DOFade(0, 0.3f).From(1).SetEase(Ease.OutQuad);
+        notesGenerator.canChange = true;
+        img.DOFade(0, beatDuration).From(1).SetEase(Ease.OutQuad).OnComplete(() =>
+        {
+            notesGenerator.canChange = false;
+        });
         yield return new WaitForSeconds(interval);
         StartCoroutine(FlashCoroutime());
     }

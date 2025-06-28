@@ -2654,7 +2654,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a783ce24bbcb8e042bf367dc16899cf8, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 929827029341718963, guid: a783ce24bbcb8e042bf367dc16899cf8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -4361,19 +4361,31 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 269163284}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 8a6ba97678c48c342a14b6dfdffe01fa, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.29454356
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8a6ba97678c48c342a14b6dfdffe01fa, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.29454356
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8a6ba97678c48c342a14b6dfdffe01fa, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.29454356
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8a6ba97678c48c342a14b6dfdffe01fa, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 46.03728
+      value: -0.0051186
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8a6ba97678c48c342a14b6dfdffe01fa, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.03999996
+      value: -0.983
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8a6ba97678c48c342a14b6dfdffe01fa, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.4347148
+      value: 0.358
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8a6ba97678c48c342a14b6dfdffe01fa, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4381,15 +4393,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8a6ba97678c48c342a14b6dfdffe01fa, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8a6ba97678c48c342a14b6dfdffe01fa, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8a6ba97678c48c342a14b6dfdffe01fa, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8a6ba97678c48c342a14b6dfdffe01fa, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -4405,7 +4417,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 8a6ba97678c48c342a14b6dfdffe01fa, type: 3}
       propertyPath: m_Name
-      value: CABALLO Y BARDO PRUEBA 1
+      value: CABALLO Y BARDO
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4812,6 +4824,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 114767157}
+  - {fileID: 2123173109}
   m_Father: {fileID: 1255090158}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &269163285
@@ -4969,7 +4982,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0.5787501, y: 0.98}
-  m_AnchoredPosition: {x: 7.726349, y: 3.6741486}
+  m_AnchoredPosition: {x: 7.7263794, y: 3.6741333}
   m_SizeDelta: {x: -0.5307007, y: -8.22998}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &321115271
@@ -5015,7 +5028,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flashColor: {r: 1, g: 1, b: 1, a: 1}
+  beatDuration: 0.3
   interval: 0.5
+  notesGenerator: {fileID: 796184797}
 --- !u!222 &321115273
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6689,6 +6704,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   instrument: 0
+  canChange: 0
   charts:
   - {fileID: 4900000, guid: c81b430a1d9c2e442a9f8a0fac682bf9, type: 3}
   - {fileID: 4900000, guid: 06eb25212180d8541a2c66a9684a6978, type: 3}
@@ -6705,6 +6721,7 @@ MonoBehaviour:
   beatImg: {fileID: 1220605591}
   beatInterval: 0.6
   hitNotes: {fileID: 81368750}
+  multiplierController: {fileID: 983176795}
 --- !u!1 &813870535
 GameObject:
   m_ObjectHideFlags: 0
@@ -10421,6 +10438,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2108279276}
   m_CullTransparentMesh: 1
+--- !u!4 &2123173109 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8a6ba97678c48c342a14b6dfdffe01fa, type: 3}
+  m_PrefabInstance: {fileID: 149476307}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2139519844
 GameObject:
   m_ObjectHideFlags: 0
@@ -10511,4 +10533,3 @@ SceneRoots:
   - {fileID: 213339211}
   - {fileID: 1805279425}
   - {fileID: 1497614256}
-  - {fileID: 149476307}

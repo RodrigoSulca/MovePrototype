@@ -9,6 +9,7 @@ public class NotesGenerator : MonoBehaviour
 {
     public enum Instrument { I1, I2,I3 }
     public Instrument instrument;
+    public bool canChange;
     public TextAsset[] charts;
     public Transform[] lines;
     public GameObject[] notePrefabs;
@@ -19,6 +20,7 @@ public class NotesGenerator : MonoBehaviour
     public Image beatImg;
     public float beatInterval;
     public HitNotes hitNotes;
+    public MultiplierController multiplierController;
     private EventInstance musicEventInstance;
 
     void Start()
@@ -80,6 +82,11 @@ public class NotesGenerator : MonoBehaviour
 
     void ChangeInstrument()
     {
+        if(canChange){
+            Debug.Log("Reproducir sonido cambio de instrumento");
+        }else{
+            multiplierController.FailNote();
+        }
         instrument = (Instrument)(((int)instrument + 1) % System.Enum.GetValues(typeof(Instrument)).Length);
         hitNotes.defaultMaterial = hitNotes.materials[(int)instrument];
         hitNotes.mRenderer.material = hitNotes.defaultMaterial;
