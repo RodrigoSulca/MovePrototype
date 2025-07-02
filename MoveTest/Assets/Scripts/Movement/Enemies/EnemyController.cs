@@ -1,6 +1,8 @@
 using UnityEngine;
 using DG.Tweening;
 using Unity.Mathematics;
+using System;
+using Random = UnityEngine.Random;
 public class EnemyController : MonoBehaviour
 {
     public enum Type { Green, Blue, Red }
@@ -72,21 +74,25 @@ public class EnemyController : MonoBehaviour
             Debug.Log("posX:" + posX);
             if (Mathf.Abs(posX - lanePosX[1]) < epsilon) // -4.03722f
             { // Si el enemigo verde esta en el carril 1, lo movemos al carril 2
-                posX = lanePosX[2]; // -4.03722f - (-2.82f)
+                posX = lanePosX[2];
                 Debug.Log("new posX:" + posX);
             }
             else if (Mathf.Abs(posX - lanePosX[2]) < epsilon)
-            { // Si el enemigo verde esta en el carril 2, lo movemos al carril 3
-                posX = lanePosX[3]; // -2.82f - (-1.564371f)
+            { // Si el enemigo verde esta en el carril 2, lo movemos al carril 1 o 3 de manera aleatoria
+                int random = Random.Range(0, 2);
+                if(random == 0)
+                    posX = lanePosX[1];
+                else
+                    posX = lanePosX[3];
                 Debug.Log("new posX:" + posX);
             }
             else if (Mathf.Abs(posX - lanePosX[3]) < epsilon)
-            {  // Si el enemigo verde esta en el carril 3, lo movemos al carril 1
-                posX = lanePosX[1]; // -1.564371f - (-4.03722f)
+            {  // Si el enemigo verde esta en el carril 3, lo movemos al carril 2
+                posX = lanePosX[2];
                 Debug.Log("new posX:" + posX);
             }
             // Movemos Z una distancia aproximada de 1.2364245 hacia adelante
-            posZ -= 1.23f; // -11.23
+            posZ -= 1.23f;
 
             // Creamos el Vector destino a mover
             Vector3 diagonalTarget = new Vector3(posX, posY, posZ);
