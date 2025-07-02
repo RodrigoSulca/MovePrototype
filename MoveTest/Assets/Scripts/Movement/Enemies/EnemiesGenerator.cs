@@ -13,7 +13,6 @@ public class EnemiesGenerator : MonoBehaviour
     public PhasesList phasesList;
     private int enemyIndex = 0;
     private int phaseIndex = 0;
-    private int controllerIndex = 0;
     private float tiempoInicio;
 
     void Start()
@@ -25,45 +24,67 @@ public class EnemiesGenerator : MonoBehaviour
 
     void Update()
     {
-        if (enemiesList[phaseIndex] == null || enemyIndex >= enemiesList[phaseIndex].enemies.Length)
+        if ( phaseIndex < enemiesList.Length && (enemiesList[phaseIndex] == null || enemyIndex >= enemiesList[phaseIndex].enemies.Length))
         {
             return;
         }
 
         float tiempoActual = Time.time - tiempoInicio;
+        float previousSpawn = 0;
 
-        while (enemyIndex < enemiesList[phaseIndex].enemies.Length && enemiesList[phaseIndex].enemies[enemyIndex].spawnTime <= tiempoActual)
+        while (phaseIndex < phasesList.phases.Length && enemyIndex < enemiesList[phaseIndex].enemies.Length && enemiesList[phaseIndex].enemies[enemyIndex].spawnTime <= tiempoActual)
         {
             // Auxiliares
             Enemy n_enemy = enemiesList[phaseIndex].enemies[enemyIndex];
             Phase n_phase = phasesList.phases[phaseIndex];
             // Creamos enemigos siempre que spawnTime este dentro del tiempo de la fase
-            if (n_enemy.spawnTime <= n_phase.finish)
+            // y cuyo spawn sea mayor o igual al spawnTime del anterior enemigo
+            if (n_enemy.spawnTime <= n_phase.finish && n_enemy.spawnTime >= previousSpawn)
             {
                 GenerarEnemigo(n_enemy, n_phase.spawnRow[enemyIndex]);
                 enemyIndex++;
+                previousSpawn = n_enemy.spawnTime;
             }
             else
             {
                 // Verificamos que termino la fase anterior correctamente
                 // Primero revisamos si no hay mas enemigos a spawnear
-                if (enemiesList[phaseIndex].enemies[enemyIndex] != null && phaseIndex < phasesList.phases.Length)
+                if (enemiesList[phaseIndex].enemies[enemyIndex] == null)
                 {
+                    //Debug.Log("Fase terminada: No hay mas enemigos.");
                     phaseIndex++; // Nueva fase
                     enemyIndex = 0; // Indice vuelve a 0
                 }
+                // Si hay enemigos por spawnear fuera de tiempo
+                else if (enemiesList[phaseIndex].enemies[enemyIndex] != null && n_enemy.spawnTime > n_phase.finish)
+                {
+                    //Debug.Log("Fase terminada: Hay enemigos pendientes, se fuerza siguiente fase.");
+                    phaseIndex++; // Nueva fase
+                    enemyIndex = 0; // Indice vuelve a 0
+                }
+                // Llegar aqui implica que se registro un enemigo a spawnear fuera de su orden
+                else
+                {
+                    Debug.LogError("El enemigo con indice [" + enemyIndex + "] ha sido añadido erroneamente.");
+                    // Revisar si es el ultimo enemigo
+                    if (enemyIndex == enemiesList[phaseIndex].enemies.Length - 1)
+                    {   // Si lo es, pasamos a la siguiente fase
+                        phaseIndex++; // Nueva fase
+                        enemyIndex = 0; // Indice vuelve a 0
+                    }
+                    else
+                    {   // Si no lo es, continuamos con el siguiente enemigo
+                        enemyIndex++;
+                        continue;
+                    }
+                }
+            }
+            // Si el indice de la fase es mayor o igual (no hay mas fase), termina la generacion de enemigos
+            if (phaseIndex >= phasesList.phases.Length)
+            {
+                //Debug.Log("Generacion terminada: ultima fase completa.");
                 break;
             }
-            // Logica de enemigos
-            // Despues de 2 segundos, el Enemigo Azul aumenta su velocidad
-            // for (int i = 0; i <= enemyIndex; i++) // Recorrer enemigos existentes
-            // {
-            //     for (int j = 0; j <= phaseIndex; j++) // Recorrer fases existentes
-            //     {
-            //         Enemy test = enemiesList[j].enemies[i];
-            //         if (tiempoActual <= (test.spawnTime + 2) && test.enemyId == 2) AumentarVelocidad(i, j);
-            //     }
-            // }
         }
     }
 
@@ -139,8 +160,4 @@ public class EnemiesGenerator : MonoBehaviour
             enemyController.speed = enemy.speed;
         }
     }
-    // void AumentarVelocidad(int eId, int pId)
-    // {
-    //     enemyController[pId][eId].speed = 1;
-    // }
 }
