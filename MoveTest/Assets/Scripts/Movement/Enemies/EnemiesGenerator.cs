@@ -51,14 +51,14 @@ public class EnemiesGenerator : MonoBehaviour
                 // Primero revisamos si no hay mas enemigos a spawnear
                 if (enemiesList[phaseIndex].enemies[enemyIndex] == null)
                 {
-                    //Debug.Log("Fase terminada: No hay mas enemigos.");
+                    Debug.Log("Fase terminada: No hay mas enemigos.");
                     phaseIndex++; // Nueva fase
                     enemyIndex = 0; // Indice vuelve a 0
                 }
                 // Si hay enemigos por spawnear fuera de tiempo
                 else if (enemiesList[phaseIndex].enemies[enemyIndex] != null && n_enemy.spawnTime > n_phase.finish)
                 {
-                    //Debug.Log("Fase terminada: Hay enemigos pendientes, se fuerza siguiente fase.");
+                    Debug.Log("Fase terminada: Hay enemigos pendientes, se fuerza siguiente fase.");
                     phaseIndex++; // Nueva fase
                     enemyIndex = 0; // Indice vuelve a 0
                 }
@@ -82,7 +82,7 @@ public class EnemiesGenerator : MonoBehaviour
             // Si el indice de la fase es mayor o igual (no hay mas fase), termina la generacion de enemigos
             if (phaseIndex >= phasesList.phases.Length)
             {
-                //Debug.Log("Generacion terminada: ultima fase completa.");
+                Debug.Log("Generacion terminada: ultima fase completa.");
                 break;
             }
         }
@@ -118,9 +118,9 @@ public class EnemiesGenerator : MonoBehaviour
                     // Generamos la data del Enemigo
                     enemy_data.enemyId = phasesList.phases[i].enemyId[j];
                     // Temporal, esto debe ser cargado desde la DB interna de enemigos
-                    if (enemy_data.enemyId == 1) enemy_data.speed = (float)3;
-                    else if (enemy_data.enemyId == 2) enemy_data.speed = (float)3.5;
-                    else if (enemy_data.enemyId == 3) enemy_data.speed = 2;
+                    // if (enemy_data.enemyId == 1) enemy_data.speed = (float)3;
+                    // else if (enemy_data.enemyId == 2) enemy_data.speed = (float)3.5;
+                    // else if (enemy_data.enemyId == 3) enemy_data.speed = 2;
                     // =====
                     enemy_data.spawnTime = phasesList.phases[i].start + phasesList.phases[i].spawnTime[j];
                     // Asignamos el enemigo a la lista

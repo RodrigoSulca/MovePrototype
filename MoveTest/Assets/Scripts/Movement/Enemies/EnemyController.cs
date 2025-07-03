@@ -44,7 +44,7 @@ public class EnemyController : MonoBehaviour
 
     private void RedMove()
     {
-        rb.DOMoveZ(endPoint.transform.position.z, speed).SetEase(Ease.Linear).OnComplete(() =>
+        rb.DOMoveZ(endPoint.transform.position.z, initSpeed).SetEase(Ease.Linear).OnComplete(() =>
         {
             Destroy(gameObject);
         });

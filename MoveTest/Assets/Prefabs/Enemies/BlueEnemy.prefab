@@ -50,8 +50,10 @@ MonoBehaviour:
   type: 1
   speed: 3.5
   initMoveDistance: -3
-  initSpeed: 1.5
+  initSpeed: 2.5
   finalSpeed: 0.5
+  targetOffset: {x: 0, y: 0, z: 0}
+  diagonalTargetPosition: {x: 0, y: 0, z: 0}
 --- !u!54 &-3001102981184704804
 Rigidbody:
   m_ObjectHideFlags: 0
