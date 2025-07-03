@@ -9,10 +9,12 @@ public class AudioManager : MonoBehaviour
     [Range(0, 1)] public float masterVolume;
     [Range(0, 1)] public float musicVolume;
     [Range(0, 1)] public float sfxVolume;
+    [Range(0, 1)] public float sfxNotes;
 
     private Bus masterBus;
     private Bus musicBus;
     private Bus sfxBus;
+    private Bus notesBus;
     private List<EventInstance> eventInstances;
     public static AudioManager instance { get; private set; }
 
@@ -31,7 +33,7 @@ public class AudioManager : MonoBehaviour
         masterBus = RuntimeManager.GetBus("bus:/");
         musicBus = RuntimeManager.GetBus("bus:/Music");
         sfxBus = RuntimeManager.GetBus("bus:/SFX");
-        //InitializeSong(FMODEvents.instance.song);
+        notesBus = RuntimeManager.GetBus("bus:/NotesSFX");
     }
 
     private void Update()
@@ -39,6 +41,7 @@ public class AudioManager : MonoBehaviour
         masterBus.setVolume(masterVolume);
         musicBus.setVolume(musicVolume);
         sfxBus.setVolume(sfxVolume);
+        notesBus.setVolume(sfxNotes);
     }
 
     public void PlayOneShot(EventReference sound, Vector3 worldPos)

@@ -15,10 +15,10 @@ MonoBehaviour:
   Path: ../../../AudioSystem/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638870869605490048
+  lastModified: 638870890181035490
   FileSizes:
   - Name: Desktop
-    Value: 1378
+    Value: 1524
   Exists: 1
 --- !u!114 &-6922173802614162521
 MonoBehaviour:
@@ -89,10 +89,10 @@ MonoBehaviour:
   Path: ../../../AudioSystem/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638870869605515245
+  lastModified: 638870890181048807
   FileSizes:
   - Name: Desktop
-    Value: 1286
+    Value: 1372
   Exists: 1
 --- !u!114 &-5210354266795385102
 MonoBehaviour:
@@ -136,38 +136,11 @@ MonoBehaviour:
   Path: ../../../AudioSystem/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638870875864985570
+  lastModified: 638870890181454828
   FileSizes:
   - Name: Desktop
-    Value: 107040
+    Value: 102656
   Exists: 1
---- !u!114 &-2978680991690266933
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/PlayNote
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/PlayNote
-  Guid:
-    Data1: -1789744169
-    Data2: 1238655916
-    Data3: 1946589086
-    Data4: -1606428518
-  Banks:
-  - {fileID: -3341202573336956376}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 262
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -185,6 +158,7 @@ MonoBehaviour:
   - {fileID: -8891897159459841498}
   - {fileID: -3341202573336956376}
   - {fileID: 3297347575025335873}
+  - {fileID: 434554850605263603}
   EditorEvents:
   - {fileID: 6292220811775350387}
   - {fileID: 2725930542044449417}
@@ -193,14 +167,14 @@ MonoBehaviour:
   - {fileID: 493832130581679991}
   - {fileID: 5826036992649813860}
   - {fileID: -6922173802614162521}
-  - {fileID: -2978680991690266933}
+  - {fileID: 947469767755221488}
   EditorParameters: []
   MasterBanks:
   - {fileID: -8891897159459841498}
   StringsBanks:
   - {fileID: -5694865411677880366}
   cacheVersion: 131848
-  cacheTime: 638870875864985570
+  cacheTime: 638870890181635669
   SerializableEventsDict:
   - key: event:/FailNote
     index: 0
@@ -216,8 +190,28 @@ MonoBehaviour:
     index: 5
   - key: event:/SFX/ChangeInstrument
     index: 6
-  - key: event:/SFX/PlayNote
+  - key: event:/NotesSFX/PlayNote
     index: 7
+--- !u!114 &434554850605263603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/NotesSFX.bank
+  m_EditorClassIdentifier: 
+  Path: ../../../AudioSystem/Build/Desktop/NotesSFX.bank
+  Name: NotesSFX
+  StudioPath: bank:/NotesSFX
+  lastModified: 638870890181635669
+  FileSizes:
+  - Name: Desktop
+    Value: 5120
+  Exists: 1
 --- !u!114 &493832130581679991
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -245,6 +239,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &947469767755221488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/NotesSFX/PlayNote
+  m_EditorClassIdentifier: 
+  Path: event:/NotesSFX/PlayNote
+  Guid:
+    Data1: -1789744169
+    Data2: 1238655916
+    Data3: 1946589086
+    Data4: -1606428518
+  Banks:
+  - {fileID: 434554850605263603}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 262
 --- !u!114 &2725930542044449417
 MonoBehaviour:
   m_ObjectHideFlags: 0
