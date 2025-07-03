@@ -73,11 +73,12 @@ public class RailMove : MonoBehaviour
             other.transform.DOKill();
             Destroy(other.gameObject);
             Death();
-            
+
         }
     }
 
     private void DmgFlash(){
+        AudioManager.instance.PlayOneShot(FMODEvents.instance.impactPlayer, this.transform.position);
         dmgPanel.color = dmgColor;
         dmgPanel.DOFade(0, 0.3f).From(1).SetEase(Ease.OutQuad);
     }

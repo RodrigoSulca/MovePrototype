@@ -8,9 +8,15 @@ public class FMODEvents : MonoBehaviour
     [field: SerializeField] public EventReference song { get; private set; }
 
     [field: Header("SFX")]
+    [field: SerializeField] public EventReference changeInstrument { get; private set; }
+    [field: SerializeField] public EventReference playNote { get; private set; }
     [field: SerializeField] public EventReference noteFailed { get; private set; }
+    [field: SerializeField] public EventReference failInstrument { get; private set; }
+    [field: SerializeField] public EventReference impactPlayer { get; private set; }
+    
     [field: Header("PowerUps SFX")]
     [field: SerializeField] public EventReference Invulnerable { get; private set; }
+    [field: SerializeField] public EventReference healthPlayer { get; private set; }
     public static FMODEvents instance { get; private set; }
 
     private void Awake()

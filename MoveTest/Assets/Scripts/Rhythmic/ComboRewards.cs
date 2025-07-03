@@ -41,7 +41,7 @@ public class ComboRewards : MonoBehaviour
         {
             case 0:
                 hpSlider.value += 50;
-                Debug.Log("Bufo Vida");
+                AudioManager.instance.PlayOneShot(FMODEvents.instance.healthPlayer, this.transform.position);
                 break;
             case 1:
                 HorseArmor();

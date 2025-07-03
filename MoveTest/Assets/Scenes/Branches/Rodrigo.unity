@@ -562,6 +562,20 @@ MonoBehaviour:
       Data3: 1335521436
       Data4: -2079294966
     Path: event:/Songs/TutorialSong
+  <changeInstrument>k__BackingField:
+    Guid:
+      Data1: 701622760
+      Data2: 1327069195
+      Data3: 1646527625
+      Data4: 893984401
+    Path: event:/SFX/ChangeInstrument
+  <playNote>k__BackingField:
+    Guid:
+      Data1: -1789744169
+      Data2: 1238655916
+      Data3: 1946589086
+      Data4: -1606428518
+    Path: event:/SFX/PlayNote
   <noteFailed>k__BackingField:
     Guid:
       Data1: 1184030711
@@ -569,6 +583,20 @@ MonoBehaviour:
       Data3: -985773123
       Data4: 784211291
     Path: event:/FailNote
+  <failInstrument>k__BackingField:
+    Guid:
+      Data1: -1459948160
+      Data2: 1161757410
+      Data3: 2046283188
+      Data4: 729530009
+    Path: event:/SFX/FailInstrument
+  <impactPlayer>k__BackingField:
+    Guid:
+      Data1: 578613402
+      Data2: 1281160453
+      Data3: 485664433
+      Data4: 971758329
+    Path: event:/SFX/Impact
   <Invulnerable>k__BackingField:
     Guid:
       Data1: 1628593731
@@ -576,6 +604,13 @@ MonoBehaviour:
       Data3: 804354744
       Data4: -1193989346
     Path: event:/SFX/Invulnerable
+  <healthPlayer>k__BackingField:
+    Guid:
+      Data1: 1399382378
+      Data2: 1293859072
+      Data3: -1854925661
+      Data4: -864956367
+    Path: event:/SFX/HealthPlayer
 --- !u!1001 &114767155
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11731,14 +11766,14 @@ RectTransform:
   m_Children:
   - {fileID: 1648994427}
   - {fileID: 760017846}
+  - {fileID: 321115270}
   - {fileID: 946726463}
   - {fileID: 348955294}
   - {fileID: 1220605590}
   - {fileID: 1254995638}
   - {fileID: 1703072848}
-  - {fileID: 625022422}
   - {fileID: 1526717901}
-  - {fileID: 321115270}
+  - {fileID: 625022422}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -12525,67 +12560,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -5}
   m_SizeDelta: {x: 0, y: -20}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1001 &1497614256
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 5696187511505870335, guid: c80a78cba504d82499f9b7299acb06be, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -4.2762666
-      objectReference: {fileID: 0}
-    - target: {fileID: 5696187511505870335, guid: c80a78cba504d82499f9b7299acb06be, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.65
-      objectReference: {fileID: 0}
-    - target: {fileID: 5696187511505870335, guid: c80a78cba504d82499f9b7299acb06be, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 3.9497643
-      objectReference: {fileID: 0}
-    - target: {fileID: 5696187511505870335, guid: c80a78cba504d82499f9b7299acb06be, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5696187511505870335, guid: c80a78cba504d82499f9b7299acb06be, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5696187511505870335, guid: c80a78cba504d82499f9b7299acb06be, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5696187511505870335, guid: c80a78cba504d82499f9b7299acb06be, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5696187511505870335, guid: c80a78cba504d82499f9b7299acb06be, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5696187511505870335, guid: c80a78cba504d82499f9b7299acb06be, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5696187511505870335, guid: c80a78cba504d82499f9b7299acb06be, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8356534356833644314, guid: c80a78cba504d82499f9b7299acb06be, type: 3}
-      propertyPath: m_Name
-      value: EnemyBlue
-      objectReference: {fileID: 0}
-    - target: {fileID: 8356534356833644314, guid: c80a78cba504d82499f9b7299acb06be, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: c80a78cba504d82499f9b7299acb06be, type: 3}
 --- !u!1 &1509159349
 GameObject:
   m_ObjectHideFlags: 0
@@ -14884,4 +14858,3 @@ SceneRoots:
   - {fileID: 627020524}
   - {fileID: 213339211}
   - {fileID: 1805279425}
-  - {fileID: 1497614256}

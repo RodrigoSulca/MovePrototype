@@ -82,10 +82,14 @@ public class NotesGenerator : MonoBehaviour
 
     void ChangeInstrument()
     {
-        if(canChange){
-            Debug.Log("Reproducir sonido cambio de instrumento");
-        }else{
+        if (canChange)
+        {
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.changeInstrument, this.transform.position);
+        }
+        else
+        {
             multiplierController.FailNote();
+            AudioManager.instance.PlayOneShot(FMODEvents.instance.failInstrument, this.transform.position);
         }
         instrument = (Instrument)(((int)instrument + 1) % System.Enum.GetValues(typeof(Instrument)).Length);
         hitNotes.defaultMaterial = hitNotes.materials[(int)instrument];
