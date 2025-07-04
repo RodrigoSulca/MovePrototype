@@ -89,7 +89,7 @@ public class RailMove : MonoBehaviour
         dmgPanel.DOFade(0, 0.3f).From(1).SetEase(Ease.OutQuad);
     }
 
-    private void Death()
+    public void Death()
     {
         Debug.Log("PlayerDeath");
         AudioManager.instance.GetMusicEventInstance().setPitch(0.68f);

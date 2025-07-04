@@ -29,6 +29,7 @@ public class PauseManager : MonoBehaviour
     }
 
     public void Exit(){
+        AudioManager.instance.GetMusicEventInstance().stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
         SceneManager.LoadScene("MainMenu");
     }
 }
