@@ -9,9 +9,10 @@ public class MultiplierController : MonoBehaviour
     public Slider multSlider;
     public Slider hpSlider;
     private int initCantNotes;
+    public Sprite[] multNums;
+    public SpriteRenderer multSpriteR;
     public TMP_Text multiplierTxt;
     public TMP_Text pointsTxt;
-    private AudioSource audioSource;
     private ComboRewards comboRewards;
     public NoteFeedback feedback;
     public HitNotes hitNotes;
@@ -19,7 +20,6 @@ public class MultiplierController : MonoBehaviour
 
     void Start()
     {
-        audioSource = GetComponent<AudioSource>();
         comboRewards = GetComponent<ComboRewards>();
         initCantNotes = cantNotes;
         multSlider.maxValue = initCantNotes;
@@ -28,6 +28,7 @@ public class MultiplierController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         multSlider.value = comboRewards.actualCombo;
         CheckMult();
         multiplierTxt.text = $"x{actualMult}";
@@ -46,6 +47,7 @@ public class MultiplierController : MonoBehaviour
             cantNotes += initCantNotes;
             actualMult++;
         }
+        multSpriteR.sprite = multNums[actualMult - 1];
     }
 
     public void FailNote()

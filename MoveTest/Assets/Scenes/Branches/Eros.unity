@@ -9933,7 +9933,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 354368494}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: e35cc0b8c7647234bacdf26c651ac562, type: 2}
   m_CullingMode: 0
@@ -13259,6 +13259,12 @@ MonoBehaviour:
   totalPoints: 0
   multSlider: {fileID: 1254995639}
   hpSlider: {fileID: 348955293}
+  multNums:
+  - {fileID: 21300000, guid: 10e5bbfeba25dd64abecebdbce767454, type: 3}
+  - {fileID: 21300000, guid: b7dbf8da490d84a489a7006f7ea88975, type: 3}
+  - {fileID: 21300000, guid: 835f90ac9a5c1e44aa08708ec9e1435b, type: 3}
+  - {fileID: 21300000, guid: fb8fd05db89b7454f83f58b73120132a, type: 3}
+  multSpriteR: {fileID: 354368496}
   multiplierTxt: {fileID: 1648994428}
   pointsTxt: {fileID: 760017847}
   feedback: {fileID: 81368753}
