@@ -42,10 +42,10 @@ MonoBehaviour:
   Path: ../../../Documents/AudioSystem/Build/Desktop/Songs.bank
   Name: Songs
   StudioPath: bank:/Songs
-  lastModified: 638870855210000000
+  lastModified: 638872333796941981
   FileSizes:
   - Name: Desktop
-    Value: 795264
+    Value: 795232
   Exists: 1
 --- !u!114 &-3298278027716820412
 MonoBehaviour:
@@ -134,14 +134,24 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: 1993904377928399222}
   cacheVersion: 131848
-  cacheTime: 638870890180000000
+  cacheTime: 638872333796941981
   SerializableEventsDict:
   - key: event:/FailNote
     index: 0
-  - key: event:/Songs/TutorialSong
-    index: 1
   - key: event:/SFX/Invulnerable
+    index: 1
+  - key: event:/NotesSFX/PlayNote
     index: 2
+  - key: event:/SFX/HealthPlayer
+    index: 3
+  - key: event:/SFX/FailInstrument
+    index: 4
+  - key: event:/SFX/Impact
+    index: 5
+  - key: event:/SFX/ChangeInstrument
+    index: 6
+  - key: event:/Songs/TutorialSong
+    index: 7
 --- !u!114 &1319675968020553716
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -211,7 +221,7 @@ MonoBehaviour:
   Path: ../../../Documents/AudioSystem/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638870890180000000
+  lastModified: 638872333777390353
   FileSizes:
   - Name: Desktop
     Value: 1372
@@ -231,7 +241,7 @@ MonoBehaviour:
   Path: ../../../Documents/AudioSystem/Build/Desktop/NotesSFX.bank
   Name: NotesSFX
   StudioPath: bank:/NotesSFX
-  lastModified: 638870890180000000
+  lastModified: 638872333779383423
   FileSizes:
   - Name: Desktop
     Value: 5120
@@ -251,7 +261,7 @@ MonoBehaviour:
   Path: ../../../Documents/AudioSystem/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638870890180000000
+  lastModified: 638872333782514463
   FileSizes:
   - Name: Desktop
     Value: 102656
@@ -325,7 +335,7 @@ MonoBehaviour:
   Path: ../../../Documents/AudioSystem/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638870890180000000
+  lastModified: 638872333777370712
   FileSizes:
   - Name: Desktop
     Value: 1524

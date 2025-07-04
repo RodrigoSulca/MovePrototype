@@ -11449,7 +11449,7 @@ MonoBehaviour:
   masterVolume: 1
   musicVolume: 1
   sfxVolume: 1
-  sfxNotes: 0
+  sfxNotes: 1
 --- !u!1 &1905075048
 GameObject:
   m_ObjectHideFlags: 0

@@ -104,6 +104,6 @@ public class RailMove : MonoBehaviour
         models[0].SetActive(false);
         models[1].SetActive(true);
         playerColl.size = new Vector3(playerColl.size.x, playerColl.size.y, 0.6452804f);
-        playerColl.center = new Vector3(playerColl.size.x, playerColl.size.y, 0.3253124f);
+        playerColl.center = new Vector3(playerColl.center.x, playerColl.center.y, 0.3253124f);
     }
 }
