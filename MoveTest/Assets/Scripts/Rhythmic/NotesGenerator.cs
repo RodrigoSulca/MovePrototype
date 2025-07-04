@@ -7,19 +7,21 @@ using FMOD.Studio;
 
 public class NotesGenerator : MonoBehaviour
 {
-    public enum Instrument { I1, I2,I3 }
+    public enum Instrument { I1, I2, I3 }
     public Instrument instrument;
+    public bool onRhythm;
     public bool canChange;
+    public float changeCooldown;
     public TextAsset[] charts;
     public Transform[] lines;
     public GameObject[] notePrefabs;
-
     public NotesList notesList;
     private HashSet<int> notasGeneradas = new();
     public float tiempoActual;
     public Image beatImg;
     public float beatInterval;
     public HitNotes hitNotes;
+    public InstrumentVController[] instrumentVControllers;
     public MultiplierController multiplierController;
     private EventInstance musicEventInstance;
 
@@ -33,9 +35,11 @@ public class NotesGenerator : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && canChange)
         {
             ChangeInstrument();
+            canChange = false;
+            StartCoroutine(ChangeCooldown());
         }
 
         if (notesList == null || notesList.notes == null)
@@ -82,7 +86,7 @@ public class NotesGenerator : MonoBehaviour
 
     void ChangeInstrument()
     {
-        if (canChange)
+        if (onRhythm)
         {
             AudioManager.instance.PlayOneShot(FMODEvents.instance.changeInstrument, this.transform.position);
         }
@@ -91,9 +95,12 @@ public class NotesGenerator : MonoBehaviour
             multiplierController.FailNote();
             AudioManager.instance.PlayOneShot(FMODEvents.instance.failInstrument, this.transform.position);
         }
+        instrumentVControllers[(int)instrument].active = false;
         instrument = (Instrument)(((int)instrument + 1) % System.Enum.GetValues(typeof(Instrument)).Length);
         hitNotes.defaultMaterial = hitNotes.materials[(int)instrument];
+        instrumentVControllers[(int)instrument].active = true;
         hitNotes.mRenderer.material = hitNotes.defaultMaterial;
+        DeleteNotes();
         CargarCancion();
         Debug.Log("Instrumento actual: " + instrument);
     }
@@ -104,5 +111,20 @@ public class NotesGenerator : MonoBehaviour
         yield return new WaitForSeconds(beatInterval);
         beatImg.color = Color.white;
         StartCoroutine(Beat());
+    }
+
+    private IEnumerator ChangeCooldown()
+    {
+        yield return new WaitForSeconds(changeCooldown);
+        canChange = true;
+    }
+
+    public void DeleteNotes()
+    {
+        GameObject[] notes = GameObject.FindGameObjectsWithTag("Note");
+        foreach (GameObject note in notes)
+        {
+            note.GetComponent<NoteController>().DestroyNote();
+        } 
     }
 }

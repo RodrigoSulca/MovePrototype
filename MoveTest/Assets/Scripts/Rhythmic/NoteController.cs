@@ -14,7 +14,7 @@ public class NoteController : MonoBehaviour
         multiplierController = GameObject.FindWithTag("MultiplierM").GetComponent<MultiplierController>();
         hitNotes = GameObject.FindWithTag("NoteHitter").GetComponent<HitNotes>();
         MoveDown();
-        
+
     }
 
     void MoveDown()
@@ -35,8 +35,13 @@ public class NoteController : MonoBehaviour
     {
         int finalPoints = points * multiplierController.actualMult;
         multiplierController.totalPoints += finalPoints;
-        multiplierController.hpSlider.value += finalPoints/10;
+        multiplierController.hpSlider.value += finalPoints / 10;
         rb.DOKill();
+        Destroy(gameObject);
+    }
+
+    public void DestroyNote()
+    {
         Destroy(gameObject);
     }
 }

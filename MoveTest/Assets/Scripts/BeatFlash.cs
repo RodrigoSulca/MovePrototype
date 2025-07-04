@@ -15,6 +15,6 @@ public class BeatFlash : MonoBehaviour
     public void Flash()
     {
         img.color = flashColor;
-        img.DOFade(0, 0.3f).From(1).SetEase(Ease.OutQuad);  
+        img.DOFade(0, 0.3f).From(1).SetEase(Ease.OutQuad);
     }
 }

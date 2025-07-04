@@ -46,7 +46,6 @@ public class HitNotes : MonoBehaviour
             other.GetComponent<NoteController>().PlayNote();
             AudioManager.instance.PlayOneShot(FMODEvents.instance.playNote, this.transform.position);
             NoteText("Hit!");
-            //mRenderer.material = defaultMaterial;
             active = false;
         }
     }

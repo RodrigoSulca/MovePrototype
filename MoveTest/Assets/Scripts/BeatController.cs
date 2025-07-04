@@ -23,10 +23,10 @@ public class BeatController : MonoBehaviour
     private IEnumerator FlashCoroutime()
     {
         img.color = flashColor;
-        notesGenerator.canChange = true;
+        notesGenerator.onRhythm = true;
         img.DOFade(0, beatDuration).From(1).SetEase(Ease.OutQuad).OnComplete(() =>
         {
-            notesGenerator.canChange = false;
+            notesGenerator.onRhythm = false;
         });
         yield return new WaitForSeconds(interval);
         StartCoroutine(FlashCoroutime());
