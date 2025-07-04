@@ -222,6 +222,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputKey: 104
   activeMaterial: {fileID: 2100000, guid: 93a754d7d1dcf594888236a59202ebd0, type: 2}
+  comboRewards: {fileID: 0}
+  materials: []
+  textPrefab: {fileID: 0}
+  textSpawner: {fileID: 0}
+  mRenderer: {fileID: 0}
+  defaultMaterial: {fileID: 0}
 --- !u!54 &81368751
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -533,6 +539,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputKey: 108
   activeMaterial: {fileID: 2100000, guid: 93a754d7d1dcf594888236a59202ebd0, type: 2}
+  comboRewards: {fileID: 0}
+  materials: []
+  textPrefab: {fileID: 0}
+  textSpawner: {fileID: 0}
+  mRenderer: {fileID: 0}
+  defaultMaterial: {fileID: 0}
 --- !u!65 &240546314
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -684,6 +696,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputKey: 106
   activeMaterial: {fileID: 2100000, guid: 93a754d7d1dcf594888236a59202ebd0, type: 2}
+  comboRewards: {fileID: 0}
+  materials: []
+  textPrefab: {fileID: 0}
+  textSpawner: {fileID: 0}
+  mRenderer: {fileID: 0}
+  defaultMaterial: {fileID: 0}
 --- !u!65 &256766296
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -860,7 +878,11 @@ MonoBehaviour:
   - {fileID: 1905075048}
   moveTime: 0.2
   onHorse: 1
+  armor: 0
   dmgPanel: {fileID: 946726462}
+  dmgColor: {r: 0, g: 0, b: 0, a: 0}
+  deathBg: {fileID: 0}
+  deathPanel: {fileID: 0}
 --- !u!54 &256822359
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1611,7 +1633,8 @@ MonoBehaviour:
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
+  m_fontSharedMaterials:
+  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
@@ -1762,6 +1785,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   instrument: 0
+  onRhythm: 0
+  canChange: 0
+  changeCooldown: 0
   charts:
   - {fileID: 4900000, guid: c1c85d45da9656f4795c62aebd79e71d, type: 3}
   - {fileID: 4900000, guid: f5c8b4fca387db44b80ff80ee4b31336, type: 3}
@@ -1779,8 +1805,12 @@ MonoBehaviour:
   - {fileID: 6713943089359731223, guid: 8d61c1b7a597a4f4a90a752f7660b43a, type: 3}
   notesList:
     notes: []
-  moveTime: 3
-  indiceNotaActual: 0
+  tiempoActual: 0
+  beatImg: {fileID: 0}
+  beatInterval: 0
+  hitNotes: {fileID: 0}
+  instrumentVControllers: []
+  multiplierController: {fileID: 0}
 --- !u!1 &813870535
 GameObject:
   m_ObjectHideFlags: 0
@@ -1964,6 +1994,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputKey: 107
   activeMaterial: {fileID: 2100000, guid: 93a754d7d1dcf594888236a59202ebd0, type: 2}
+  comboRewards: {fileID: 0}
+  materials: []
+  textPrefab: {fileID: 0}
+  textSpawner: {fileID: 0}
+  mRenderer: {fileID: 0}
+  defaultMaterial: {fileID: 0}
 --- !u!65 &931714924
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2157,10 +2193,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actualMult: 1
   cantNotes: 5
-  consecNotes: 0
   totalPoints: 0
+  multSlider: {fileID: 0}
+  hpSlider: {fileID: 0}
   multiplierTxt: {fileID: 1648994428}
   pointsTxt: {fileID: 760017847}
+  feedback: {fileID: 0}
+  hitNotes: {fileID: 0}
+  beatFlash: {fileID: 0}
 --- !u!82 &983176796
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2915,7 +2955,8 @@ MonoBehaviour:
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
+  m_fontSharedMaterials:
+  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:

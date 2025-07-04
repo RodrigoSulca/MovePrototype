@@ -170,6 +170,20 @@ MonoBehaviour:
       Data3: 1335521436
       Data4: -2079294966
     Path: event:/Songs/TutorialSong
+  <changeInstrument>k__BackingField:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  <playNote>k__BackingField:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   <noteFailed>k__BackingField:
     Guid:
       Data1: 1184030711
@@ -177,6 +191,20 @@ MonoBehaviour:
       Data3: -985773123
       Data4: 784211291
     Path: event:/FailNote
+  <failInstrument>k__BackingField:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  <impactPlayer>k__BackingField:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   <Invulnerable>k__BackingField:
     Guid:
       Data1: 1628593731
@@ -184,6 +212,13 @@ MonoBehaviour:
       Data3: 804354744
       Data4: -1193989346
     Path: event:/SFX/Invulnerable
+  <healthPlayer>k__BackingField:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!1001 &114767155
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4127,9 +4162,11 @@ MonoBehaviour:
   - {fileID: 1905075048}
   moveTime: 0.1
   onHorse: 1
+  armor: 1
   dmgPanel: {fileID: 0}
   dmgColor: {r: 0.9607843, g: 0.43137255, b: 0.43137255, a: 0}
-  armor: 1
+  deathBg: {fileID: 0}
+  deathPanel: {fileID: 0}
 --- !u!4 &269163284
 Transform:
   m_ObjectHideFlags: 0
@@ -6006,7 +6043,8 @@ MonoBehaviour:
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
+  m_fontSharedMaterials:
+  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
@@ -6163,6 +6201,7 @@ MonoBehaviour:
   masterVolume: 1
   musicVolume: 1
   sfxVolume: 1
+  sfxNotes: 0
 --- !u!1 &1905075048
 GameObject:
   m_ObjectHideFlags: 0
