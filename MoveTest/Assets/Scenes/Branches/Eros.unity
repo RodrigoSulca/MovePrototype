@@ -426,7 +426,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b7779a64c6580e6419601b27b0337245, type: 2}
+  - {fileID: 2100000, guid: 9f5000987621f344288e47c3f5b52d17, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -472,9 +472,16 @@ MonoBehaviour:
   activeMaterial: {fileID: 2100000, guid: 93a754d7d1dcf594888236a59202ebd0, type: 2}
   comboRewards: {fileID: 983176797}
   materials:
-  - {fileID: 2100000, guid: 48a6ca1919ced9e42a9c6293c9a6d788, type: 2}
-  - {fileID: 2100000, guid: 114b36a9edc377440a2b9f16686692d2, type: 2}
-  - {fileID: 2100000, guid: 5631be599e5cc47489fd3aa32fecd683, type: 2}
+  - {fileID: 2100000, guid: 9f5000987621f344288e47c3f5b52d17, type: 2}
+  - {fileID: 2100000, guid: 914ff71e9d93a244ea71415c174a15ec, type: 2}
+  - {fileID: 2100000, guid: 4298ccddf982f3c4985da7a241316e25, type: 2}
+  mastilMaterial:
+  - {fileID: 2100000, guid: 9f5000987621f344288e47c3f5b52d17, type: 2}
+  - {fileID: 2100000, guid: 914ff71e9d93a244ea71415c174a15ec, type: 2}
+  - {fileID: 2100000, guid: 4298ccddf982f3c4985da7a241316e25, type: 2}
+  mastilRenderers:
+  - {fileID: 1709998916}
+  - {fileID: 1742282348}
   textPrefab: {fileID: 7467952854645705579, guid: 674f47e5bba09f145b9aab9b012ea4a5, type: 3}
   textSpawner: {fileID: 738550182}
   mRenderer: {fileID: 0}
@@ -10845,8 +10852,9 @@ GameObject:
   - component: {fileID: 608388724}
   - component: {fileID: 608388723}
   - component: {fileID: 608388722}
+  - component: {fileID: 608388726}
   m_Layer: 0
-  m_Name: nota verde
+  m_Name: nota azul
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10896,7 +10904,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5f72fef88efd95545a999c15db5a7ca4, type: 2}
+  - {fileID: 2100000, guid: 114b36a9edc377440a2b9f16686692d2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10941,6 +10949,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 45, z: 0}
+--- !u!114 &608388726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 608388721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fc1e027948216447a09308eb0a6a2e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  active: 0
+  activeMaterial: {fileID: 2100000, guid: 914ff71e9d93a244ea71415c174a15ec, type: 2}
 --- !u!1 &627020523
 GameObject:
   m_ObjectHideFlags: 0
@@ -12332,8 +12354,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   instrument: 0
   onRhythm: 0
-  canChange: 0
-  changeCooldown: 0
+  canChange: 1
+  changeCooldown: 1
   charts:
   - {fileID: 4900000, guid: c81b430a1d9c2e442a9f8a0fac682bf9, type: 3}
   - {fileID: 4900000, guid: 06eb25212180d8541a2c66a9684a6978, type: 3}
@@ -12351,9 +12373,9 @@ MonoBehaviour:
   beatInterval: 0.6
   hitNotes: {fileID: 81368750}
   instrumentVControllers:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1395858242}
+  - {fileID: 608388726}
+  - {fileID: 855879302}
   multiplierController: {fileID: 983176795}
 --- !u!1 &813870535
 GameObject:
@@ -12575,6 +12597,7 @@ GameObject:
   - component: {fileID: 855879300}
   - component: {fileID: 855879299}
   - component: {fileID: 855879298}
+  - component: {fileID: 855879302}
   m_Layer: 0
   m_Name: nota roja
   m_TagString: Untagged
@@ -12626,7 +12649,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a9221288c0df41049ac7d9591d7ab8ae, type: 2}
+  - {fileID: 2100000, guid: 5631be599e5cc47489fd3aa32fecd683, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -12671,6 +12694,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 45, z: 0}
+--- !u!114 &855879302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 855879297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fc1e027948216447a09308eb0a6a2e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  active: 0
+  activeMaterial: {fileID: 2100000, guid: 4298ccddf982f3c4985da7a241316e25, type: 2}
 --- !u!1 &868198968
 GameObject:
   m_ObjectHideFlags: 0
@@ -15792,8 +15829,9 @@ GameObject:
   - component: {fileID: 1395858240}
   - component: {fileID: 1395858239}
   - component: {fileID: 1395858238}
+  - component: {fileID: 1395858242}
   m_Layer: 0
-  m_Name: nota azul
+  m_Name: nota verde
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15843,7 +15881,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 87666addd91e4214ba97fbfd8adcccd8, type: 2}
+  - {fileID: 2100000, guid: 48a6ca1919ced9e42a9c6293c9a6d788, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -15888,6 +15926,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 45, z: 0}
+--- !u!114 &1395858242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1395858237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fc1e027948216447a09308eb0a6a2e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  active: 1
+  activeMaterial: {fileID: 2100000, guid: 9f5000987621f344288e47c3f5b52d17, type: 2}
 --- !u!1 &1410356801
 GameObject:
   m_ObjectHideFlags: 0

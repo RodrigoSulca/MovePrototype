@@ -100,9 +100,18 @@ public class NotesGenerator : MonoBehaviour
         hitNotes.defaultMaterial = hitNotes.materials[(int)instrument];
         instrumentVControllers[(int)instrument].active = true;
         hitNotes.mRenderer.material = hitNotes.defaultMaterial;
+        ChangeMastil();
         DeleteNotes();
         CargarCancion();
         Debug.Log("Instrumento actual: " + instrument);
+    }
+
+    public void ChangeMastil()
+    {
+        foreach (Renderer renderer in hitNotes.mastilRenderers)
+        {
+            renderer.material = hitNotes.mastilMaterial[(int)instrument];
+        }
     }
 
     private IEnumerator Beat()

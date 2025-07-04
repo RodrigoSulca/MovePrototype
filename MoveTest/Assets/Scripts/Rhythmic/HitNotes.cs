@@ -7,6 +7,8 @@ public class HitNotes : MonoBehaviour
     public ComboRewards comboRewards;
 
     public Material[] materials;
+    public Material[] mastilMaterial;
+    public Renderer[] mastilRenderers;
     public GameObject textPrefab;
     public Transform textSpawner;
 
@@ -27,9 +29,6 @@ public class HitNotes : MonoBehaviour
         {
             mRenderer.material = activeMaterial;
             active = true;
-
-
-            
         }
         else if (Input.GetKeyUp(inputKey))
         {
