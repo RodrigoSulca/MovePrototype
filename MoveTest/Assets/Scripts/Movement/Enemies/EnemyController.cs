@@ -5,7 +5,7 @@ using System;
 using Random = UnityEngine.Random;
 public class EnemyController : MonoBehaviour
 {
-    public enum Type { Green, Blue, Red }
+    public enum Type { Red, Green, Blue }
     public Type type;
     public float speed;
     [field: Header("BlueMove")]
