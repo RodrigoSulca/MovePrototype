@@ -484,6 +484,7 @@ MonoBehaviour:
   - {fileID: 1742282348}
   textPrefab: {fileID: 7467952854645705579, guid: 674f47e5bba09f145b9aab9b012ea4a5, type: 3}
   textSpawner: {fileID: 738550182}
+  hitParticle: {fileID: 1543845269}
   mRenderer: {fileID: 0}
   defaultMaterial: {fileID: 0}
 --- !u!54 &81368751
@@ -9312,8 +9313,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1.6133442, z: 2.0352821}
-  m_Center: {x: 0, y: -0.12486586, z: 0.2486955}
+  m_Size: {x: 0.72922945, y: 1.6133442, z: 1.313803}
+  m_Center: {x: -0.014345884, y: -0.12486589, z: 0.41316855}
 --- !u!54 &269163282
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -11351,6 +11352,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.size
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4035222792055163475, guid: 6f34ef0d986e9db4199cf75805f79753, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5112403345841327294, guid: 6f34ef0d986e9db4199cf75805f79753, type: 3}
       propertyPath: m_Range
       value: 4
@@ -11419,6 +11424,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5112403345868107899, guid: 6f34ef0d986e9db4199cf75805f79753, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5112403347238810568, guid: 6f34ef0d986e9db4199cf75805f79753, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5112403347238810575, guid: 6f34ef0d986e9db4199cf75805f79753, type: 3}
       propertyPath: m_Materials.Array.size
       value: 1
@@ -11426,6 +11439,14 @@ PrefabInstance:
     - target: {fileID: 7531768400295773595, guid: 6f34ef0d986e9db4199cf75805f79753, type: 3}
       propertyPath: m_Materials.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7531768400295773596, guid: 6f34ef0d986e9db4199cf75805f79753, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8280942166302414958, guid: 6f34ef0d986e9db4199cf75805f79753, type: 3}
+      propertyPath: playOnAwake
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16823,6 +16844,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1534093664}
   m_CullTransparentMesh: 1
+--- !u!198 &1543845269 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 5112403345868107899, guid: 6f34ef0d986e9db4199cf75805f79753, type: 3}
+  m_PrefabInstance: {fileID: 710516158}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1544730283
 GameObject:
   m_ObjectHideFlags: 0

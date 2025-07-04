@@ -11,6 +11,7 @@ public class HitNotes : MonoBehaviour
     public Renderer[] mastilRenderers;
     public GameObject textPrefab;
     public Transform textSpawner;
+    public ParticleSystem hitParticle;
 
     private bool active;
     [HideInInspector] public Renderer mRenderer;
@@ -41,6 +42,7 @@ public class HitNotes : MonoBehaviour
     {
         if (active && other.CompareTag("Note"))
         {
+            hitParticle.Play();
             comboRewards.actualCombo++;
             other.GetComponent<NoteController>().PlayNote();
             AudioManager.instance.PlayOneShot(FMODEvents.instance.playNote, this.transform.position);

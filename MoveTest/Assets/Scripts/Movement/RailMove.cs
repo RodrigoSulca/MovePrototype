@@ -92,6 +92,7 @@ public class RailMove : MonoBehaviour
     private void Death()
     {
         Debug.Log("PlayerDeath");
+        AudioManager.instance.GetMusicEventInstance().setPitch(0.68f);
         deathBg.DOFade(0.3f, 0.5f).OnComplete(() =>
         {
             deathPanel.SetActive(true);
