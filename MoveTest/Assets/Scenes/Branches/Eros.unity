@@ -11896,7 +11896,10 @@ MonoBehaviour:
   beatImg: {fileID: 1220605591}
   beatInterval: 0.6
   hitNotes: {fileID: 81368750}
-  instrumentVControllers: []
+  instrumentVControllers:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   multiplierController: {fileID: 983176795}
 --- !u!1 &813870535
 GameObject:
@@ -15239,67 +15242,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -5}
   m_SizeDelta: {x: 0, y: -20}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1001 &1497614256
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 5696187511505870335, guid: c80a78cba504d82499f9b7299acb06be, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -4.2762666
-      objectReference: {fileID: 0}
-    - target: {fileID: 5696187511505870335, guid: c80a78cba504d82499f9b7299acb06be, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.65
-      objectReference: {fileID: 0}
-    - target: {fileID: 5696187511505870335, guid: c80a78cba504d82499f9b7299acb06be, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 3.9497643
-      objectReference: {fileID: 0}
-    - target: {fileID: 5696187511505870335, guid: c80a78cba504d82499f9b7299acb06be, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5696187511505870335, guid: c80a78cba504d82499f9b7299acb06be, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5696187511505870335, guid: c80a78cba504d82499f9b7299acb06be, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5696187511505870335, guid: c80a78cba504d82499f9b7299acb06be, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5696187511505870335, guid: c80a78cba504d82499f9b7299acb06be, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5696187511505870335, guid: c80a78cba504d82499f9b7299acb06be, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5696187511505870335, guid: c80a78cba504d82499f9b7299acb06be, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8356534356833644314, guid: c80a78cba504d82499f9b7299acb06be, type: 3}
-      propertyPath: m_Name
-      value: EnemyBlue
-      objectReference: {fileID: 0}
-    - target: {fileID: 8356534356833644314, guid: c80a78cba504d82499f9b7299acb06be, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: c80a78cba504d82499f9b7299acb06be, type: 3}
 --- !u!1 &1509159349
 GameObject:
   m_ObjectHideFlags: 0
@@ -19010,7 +18952,6 @@ SceneRoots:
   - {fileID: 1255090158}
   - {fileID: 627020524}
   - {fileID: 1805279425}
-  - {fileID: 1497614256}
   - {fileID: 1070368812}
   - {fileID: 1709998918}
   - {fileID: 1742282350}

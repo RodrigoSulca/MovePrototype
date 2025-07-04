@@ -4,6 +4,7 @@ using UnityEngine.UI;
 public class RailMove : MonoBehaviour
 {
     public GameObject[] rails;
+    public GameObject[] models;
     public float moveTime;
     public bool onHorse;
     public bool armor;
@@ -15,10 +16,12 @@ public class RailMove : MonoBehaviour
     private int railIndex;
     private bool isMoving;
     private Rigidbody rb;
+    private BoxCollider playerColl;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        playerColl = GetComponent<BoxCollider>();
         railIndex++;
     }
 
@@ -54,11 +57,13 @@ public class RailMove : MonoBehaviour
     {
         if (other.CompareTag("Enemy") && onHorse && !armor)
         {
+            
             moveTime = 0.2f;
             DmgFlash();
             onHorse = false;
             other.transform.DOKill();
             Destroy(other.gameObject);
+            ChangeModel();
         }
         else if (other.CompareTag("Enemy") && onHorse && armor)
         {
@@ -77,18 +82,28 @@ public class RailMove : MonoBehaviour
         }
     }
 
-    private void DmgFlash(){
+    private void DmgFlash()
+    {
         AudioManager.instance.PlayOneShot(FMODEvents.instance.impactPlayer, this.transform.position);
         dmgPanel.color = dmgColor;
         dmgPanel.DOFade(0, 0.3f).From(1).SetEase(Ease.OutQuad);
     }
 
-    private void Death(){
+    private void Death()
+    {
         Debug.Log("PlayerDeath");
-        deathBg.DOFade(0.3f,0.5f).OnComplete(() =>
+        deathBg.DOFade(0.3f, 0.5f).OnComplete(() =>
         {
             deathPanel.SetActive(true);
             Time.timeScale = 0;
         });
+    }
+
+    private void ChangeModel()
+    {
+        models[0].SetActive(false);
+        models[1].SetActive(true);
+        playerColl.size = new Vector3(playerColl.size.x, playerColl.size.y, 0.6452804f);
+        playerColl.center = new Vector3(playerColl.size.x, playerColl.size.y, 0.3253124f);
     }
 }
